@@ -278,6 +278,18 @@ import swe130 from "@/assets/sage-whisper-residence-extra-130.jpeg.asset.json";
 import swe13 from "@/assets/sage-whisper-residence-extra-13.jpeg.asset.json";
 import swe91 from "@/assets/sage-whisper-residence-extra-91.jpeg.asset.json";
 
+// Cloudline Penthouse Residence — Residential Interior
+import cl2493 from "@/assets/cloudline-PAB2493-HDR.jpg.asset.json";
+import cl2316 from "@/assets/cloudline-PAB2316-HDR.jpg.asset.json";
+import cl2454 from "@/assets/cloudline-PAB2454-HDR.jpg.asset.json";
+import cl2478 from "@/assets/cloudline-PAB2478-HDR.jpg.asset.json";
+import cl2166 from "@/assets/cloudline-PAB2166-HDR.jpg.asset.json";
+import cl2298 from "@/assets/cloudline-PAB2298-HDR.jpg.asset.json";
+import cl2406 from "@/assets/cloudline-PAB2406-HDR.jpg.asset.json";
+import cl2472 from "@/assets/cloudline-PAB2472-HDR.jpg.asset.json";
+import cl2203 from "@/assets/cloudline-PAB2203-HDR.jpg.asset.json";
+import cl2304 from "@/assets/cloudline-PAB2304-HDR.jpg.asset.json";
+
 const bodyGoalsGallery = [bg1.url, bg2.url, bg3.url, bg5.url, bg6.url, bg8.url, bg9.url, bg10.url, bg11.url, bg12.url, bg16.url, bg17.url, bg18.url, bg19.url];
 const noirResidenceGallery = [
   nr66.url,
@@ -324,6 +336,7 @@ const onyxIvoryGallery = [ox1.url, ox2.url, ox3.url, ox4.url, ox5.url, ox6.url, 
 const emeraldReverieGallery = [er1.url, er2.url, er3.url, er4.url, er5.url, er6.url, er7.url, er8.url, er9.url, er10.url];
 const blushBronzeResidenceGallery = [bb3.url, bb1.url, bb2.url, bb4.url, bb5.url, bb6.url, bb7.url];
 const sageWhisperResidenceGallery = [sw3.url, sw1.url, sw2.url, swe91.url, swe75.url, swe56.url, swe27.url, swe13.url, swe90.url, swe124.url, swe45.url, swe2.url, swe130.url];
+const cloudlinePenthouseGallery = [cl2406.url, cl2454.url, cl2472.url, cl2316.url, cl2298.url, cl2304.url, cl2166.url, cl2203.url, cl2478.url, cl2493.url];
 
 export type Project = {
   slug: string;
@@ -456,6 +469,19 @@ export const projects: Project[] = [
     cover: bb3.url,
     gallery: blushBronzeResidenceGallery,
     description: "A warm residential interior shaped by blush upholstery, bronze accents, marble surfaces and a calm contemporary palette.",
+  },
+  {
+    slug: "cloudline-penthouse-residence",
+    name: "Cloudline Penthouse Residence",
+    sector: "Residential",
+    location: "",
+    year: "",
+    area: "",
+    scope: "",
+    category: "Interiors",
+    cover: cl2406.url,
+    gallery: cloudlinePenthouseGallery,
+    description: "A duplex sky home composed in luminous white, soft greys and tan leather — sculptural ceilings, double-height volumes and panoramic skyline views shape a calm, cinematic everyday.",
   },
   {
     slug: "sage-whisper-residence",
