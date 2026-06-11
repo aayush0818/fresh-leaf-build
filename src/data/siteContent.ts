@@ -41,6 +41,12 @@ import meril2 from "@/assets/meril-3.jpg.asset.json";
 
 import mb56_1 from "@/assets/meril-bld-5-6-1.png.asset.json";
 import mb56_2 from "@/assets/meril-bld-5-6-2.png.asset.json";
+import pidilite1 from "@/assets/pidilite-rd-taloja-1.jpg.asset.json";
+import pidilite2 from "@/assets/pidilite-rd-taloja-2.jpg.asset.json";
+import pidilite3 from "@/assets/pidilite-rd-taloja-3.jpg.asset.json";
+import pidilite4 from "@/assets/pidilite-rd-taloja-4.jpg.asset.json";
+import monster1 from "@/assets/monster-001.jpg.asset.json";
+import palak1 from "@/assets/palak-jewellers-1.jpg.asset.json";
 
 const { institutional: inst, residential: res, commercial: com, team } = realImages;
 
