@@ -82,6 +82,13 @@ import apj8 from "@/assets/apj-auditorium-8.jpg.asset.json";
 import mb56_1 from "@/assets/meril-bld-5-6-1.png.asset.json";
 import mb56_2 from "@/assets/meril-bld-5-6-2.png.asset.json";
 
+// Pidilite R&D Centre — Taloja (Architecture · Industrial)
+import pidilite1 from "@/assets/pidilite-rd-taloja-1.jpg.asset.json";
+import pidilite2 from "@/assets/pidilite-rd-taloja-2.jpg.asset.json";
+import pidilite3 from "@/assets/pidilite-rd-taloja-3.jpg.asset.json";
+import pidilite4 from "@/assets/pidilite-rd-taloja-4.jpg.asset.json";
+import pidilite5 from "@/assets/pidilite-rd-taloja-5.jpg.asset.json";
+
 // Divya Enclave — Hospitality Architecture
 import de1 from "@/assets/divya-enclave-1.jpg.asset.json";
 import de2 from "@/assets/divya-enclave-2.jpg.asset.json";
@@ -552,6 +559,19 @@ export const projects: Project[] = [
     cover: mb56_1.url,
     gallery: merilBld56Gallery,
     description: "",
+  },
+  {
+    slug: "pidilite-rd-centre-taloja",
+    name: "Pidilite R&D Centre — Taloja",
+    sector: "Industrial",
+    location: "Taloja",
+    year: "",
+    area: "",
+    scope: "Architecture",
+    category: "Architecture",
+    cover: pidilite1.url,
+    gallery: [pidilite1.url, pidilite2.url, pidilite3.url, pidilite4.url, pidilite5.url],
+    description: "Industrial architecture project — Pidilite Research & Development Centre at Taloja. A campus of brick-clad volumes arranged around a central landscaped court, linked by colonnaded walkways and framed by glazed laboratory wings.",
   },
   {
     slug: "emerald-reverie-classical-penthouse",
