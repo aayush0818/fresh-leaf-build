@@ -84,7 +84,7 @@ function SectorPage() {
           </div>
         ) : null}
 
-        {data.bullets ? (
+        {(data as { bullets?: string[] }).bullets ? (
           <section className="idlx-section idlx-section--bordered">
             <div className="idlx-manifesto">
               <Reveal>
@@ -93,7 +93,7 @@ function SectorPage() {
               </Reveal>
               <Reveal delay={0.18} className="idlx-manifesto-body">
                 <ul className="idlx-bullets">
-                  {data.bullets.map((b) => (
+                  {(data as { bullets?: string[] }).bullets!.map((b: string) => (
                     <li key={b}>{b}</li>
                   ))}
                 </ul>
