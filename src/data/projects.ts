@@ -289,6 +289,22 @@ import cl2406 from "@/assets/cloudline-PAB2406-HDR.jpg.asset.json";
 import cl2472 from "@/assets/cloudline-PAB2472-HDR.jpg.asset.json";
 import cl2203 from "@/assets/cloudline-PAB2203-HDR.jpg.asset.json";
 import cl2304 from "@/assets/cloudline-PAB2304-HDR.jpg.asset.json";
+import cl2028 from "@/assets/cloudline-PAB2028-HDR.jpg.asset.json";
+import cl2460 from "@/assets/cloudline-PAB2460-HDR.jpg.asset.json";
+import cl2295 from "@/assets/cloudline-PAB2295-HDR.jpg.asset.json";
+
+// Bharoso — Shree Lallubhai Seth Arogya Mandir, Savarkundla (Architecture / Commercial)
+import bharoso1 from "@/assets/bharoso-savarkundla-1.jpg.asset.json";
+import bharoso2 from "@/assets/bharoso-savarkundla-2.jpg.asset.json";
+
+// Metro Hospital — Delhi (Architecture / Commercial)
+import metroDel1 from "@/assets/metro-hospital-delhi-1.jpg.asset.json";
+import metroDel2 from "@/assets/metro-hospital-delhi-2.jpg.asset.json";
+
+// Tata Rallis — Bangalore (Architecture / Institutional)
+import tataRallis1 from "@/assets/tata-rallis-bangalore-1.jpg.asset.json";
+import tataRallis2 from "@/assets/tata-rallis-bangalore-2.jpg.asset.json";
+import tataRallis3 from "@/assets/tata-rallis-bangalore-3.jpg.asset.json";
 
 const bodyGoalsGallery = [bg1.url, bg2.url, bg3.url, bg5.url, bg6.url, bg8.url, bg9.url, bg10.url, bg11.url, bg12.url, bg16.url, bg17.url, bg18.url, bg19.url];
 const noirResidenceGallery = [
