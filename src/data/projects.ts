@@ -717,7 +717,7 @@ export const projects: Project[] = [
     category: "Interiors",
     cover: goldCornetCoverUpload.url,
     gallery: goldCornetBoutiqueGallery,
-    description: "Commercial interior project for Gold Cornet Boutique.",
+    description: "Layered with visual moments, the boutique unfolds like a curated collection — rich in character, immersive in atmosphere and distinctly memorable.",
   },
   {
     slug: "jean-claude-biguine-salon-spa",
