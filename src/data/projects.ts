@@ -427,6 +427,21 @@ const gandhiPeaceCentrePuneGallery = [gandhiPeace1.url];
 const viaAuditoriumVapiGallery = [viaVapi1.url, viaVapi2.url, viaVapi3.url, viaVapi4.url];
 const questAjaySethGallery = [quest67.url, quest77.url, quest72.url, quest65.url, quest94.url, quest97.url, quest99.url, quest47.url, quest45.url, quest57.url, quest96.url, quest51.url, quest50.url, quest18.url, quest42.url, quest38.url, quest82.url, quest23.url, quest83.url, quest80.url];
 
+// Maple Industrial Park — Vapi (Architecture · Industrial)
+import mapleGate02 from "@/assets/maple-main-gate-02.jpeg.asset.json";
+import mapleGate03 from "@/assets/maple-main-gate-03.jpeg.asset.json";
+import mapleGateRev01 from "@/assets/maple-main-gate-rev1-01.jpeg.asset.json";
+import mapleGateRev02 from "@/assets/maple-main-gate-rev1-02.jpeg.asset.json";
+import mapleGateAerial from "@/assets/maple-main-gate-aerial.jpeg.asset.json";
+import mapleGateNight from "@/assets/maple-main-gate-night.jpeg.asset.json";
+import mapleNeedlePlant from "@/assets/maple-needle-plant.jpeg.asset.json";
+
+export type Facility = {
+  name: string;
+  description: string;
+  images?: string[];
+};
+
 export type Project = {
   slug: string;
   name: string;
@@ -439,7 +454,9 @@ export type Project = {
   description: string;
   cover: string;
   gallery: string[];
+  facilities?: Facility[];
 };
+
 
 export const projects: Project[] = [
   {
