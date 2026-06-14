@@ -435,6 +435,15 @@ import mapleGateRev02 from "@/assets/maple-main-gate-rev1-02.jpeg.asset.json";
 import mapleGateAerial from "@/assets/maple-main-gate-aerial.jpeg.asset.json";
 import mapleGateNight from "@/assets/maple-main-gate-night.jpeg.asset.json";
 import mapleNeedlePlant from "@/assets/maple-needle-plant.jpeg.asset.json";
+import mapleNeedle2A from "@/assets/maple-needle-plant-2a.jpeg.asset.json";
+import mapleNeedle3A from "@/assets/maple-needle-plant-3a.jpeg.asset.json";
+import mapleSales01 from "@/assets/maple-sales-01.jpg.asset.json";
+import mapleSales02 from "@/assets/maple-sales-02.jpeg.asset.json";
+import mapleSales03 from "@/assets/maple-sales-03.jpg.asset.json";
+import mapleSales04 from "@/assets/maple-sales-04.jpg.asset.json";
+import mapleSales05 from "@/assets/maple-sales-05.jpeg.asset.json";
+import mapleWarehouse01 from "@/assets/maple-warehouse-01.jpeg.asset.json";
+import mapleWarehouse02 from "@/assets/maple-warehouse-02.jpeg.asset.json";
 
 export type Facility = {
   name: string;
@@ -602,13 +611,11 @@ export const projects: Project[] = [
     gallery: [
       mapleGateAerial.url,
       mapleGateNight.url,
-      mapleGateRev01.url,
-      mapleGateRev02.url,
-      mapleGate02.url,
-      mapleGate03.url,
-      mapleNeedlePlant.url,
+      mapleSales01.url,
+      mapleNeedle2A.url,
+      mapleWarehouse01.url,
     ],
-    description: "A master-planned industrial development composed of distinct facilities — a landmark gateway, an immersive sales experience, a refined needle plant, and a sculptural warehouse — unified by a shared architectural language of rhythm, light, and material precision.",
+    description: "",
     facilities: [
       {
         name: "Maple Main Gate",
@@ -625,15 +632,23 @@ export const projects: Project[] = [
       {
         name: "Maple Sales Office",
         description: "With its dramatic cantilevers and seamless glass envelope, the project transforms the sales journey into an immersive spatial experience.",
+        images: [
+          mapleSales01.url,
+          mapleSales02.url,
+          mapleSales03.url,
+          mapleSales04.url,
+          mapleSales05.url,
+        ],
       },
       {
         name: "Maple Needle Plant",
         description: "A contemporary industrial facility that elevates manufacturing architecture through rhythm, proportion, and refined material expression.",
-        images: [mapleNeedlePlant.url],
+        images: [mapleNeedle2A.url, mapleNeedle3A.url, mapleNeedlePlant.url],
       },
       {
         name: "Maple Warehouse",
         description: "Expressive vertical elements and clean structural lines transform a functional facility into a distinguished industrial landmark.",
+        images: [mapleWarehouse01.url, mapleWarehouse02.url],
       },
     ],
   },
