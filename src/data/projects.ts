@@ -611,13 +611,11 @@ export const projects: Project[] = [
     gallery: [
       mapleGateAerial.url,
       mapleGateNight.url,
-      mapleGateRev01.url,
-      mapleGateRev02.url,
-      mapleGate02.url,
-      mapleGate03.url,
-      mapleNeedlePlant.url,
+      mapleSales01.url,
+      mapleNeedle2A.url,
+      mapleWarehouse01.url,
     ],
-    description: "A master-planned industrial development composed of distinct facilities — a landmark gateway, an immersive sales experience, a refined needle plant, and a sculptural warehouse — unified by a shared architectural language of rhythm, light, and material precision.",
+    description: "",
     facilities: [
       {
         name: "Maple Main Gate",
@@ -634,15 +632,23 @@ export const projects: Project[] = [
       {
         name: "Maple Sales Office",
         description: "With its dramatic cantilevers and seamless glass envelope, the project transforms the sales journey into an immersive spatial experience.",
+        images: [
+          mapleSales01.url,
+          mapleSales02.url,
+          mapleSales03.url,
+          mapleSales04.url,
+          mapleSales05.url,
+        ],
       },
       {
         name: "Maple Needle Plant",
         description: "A contemporary industrial facility that elevates manufacturing architecture through rhythm, proportion, and refined material expression.",
-        images: [mapleNeedlePlant.url],
+        images: [mapleNeedle2A.url, mapleNeedle3A.url, mapleNeedlePlant.url],
       },
       {
         name: "Maple Warehouse",
         description: "Expressive vertical elements and clean structural lines transform a functional facility into a distinguished industrial landmark.",
+        images: [mapleWarehouse01.url, mapleWarehouse02.url],
       },
     ],
   },
