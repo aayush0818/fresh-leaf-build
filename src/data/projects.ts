@@ -427,6 +427,21 @@ const gandhiPeaceCentrePuneGallery = [gandhiPeace1.url];
 const viaAuditoriumVapiGallery = [viaVapi1.url, viaVapi2.url, viaVapi3.url, viaVapi4.url];
 const questAjaySethGallery = [quest67.url, quest77.url, quest72.url, quest65.url, quest94.url, quest97.url, quest99.url, quest47.url, quest45.url, quest57.url, quest96.url, quest51.url, quest50.url, quest18.url, quest42.url, quest38.url, quest82.url, quest23.url, quest83.url, quest80.url];
 
+// Maple Industrial Park — Vapi (Architecture · Industrial)
+import mapleGate02 from "@/assets/maple-main-gate-02.jpeg.asset.json";
+import mapleGate03 from "@/assets/maple-main-gate-03.jpeg.asset.json";
+import mapleGateRev01 from "@/assets/maple-main-gate-rev1-01.jpeg.asset.json";
+import mapleGateRev02 from "@/assets/maple-main-gate-rev1-02.jpeg.asset.json";
+import mapleGateAerial from "@/assets/maple-main-gate-aerial.jpeg.asset.json";
+import mapleGateNight from "@/assets/maple-main-gate-night.jpeg.asset.json";
+import mapleNeedlePlant from "@/assets/maple-needle-plant.jpeg.asset.json";
+
+export type Facility = {
+  name: string;
+  description: string;
+  images?: string[];
+};
+
 export type Project = {
   slug: string;
   name: string;
@@ -439,7 +454,9 @@ export type Project = {
   description: string;
   cover: string;
   gallery: string[];
+  facilities?: Facility[];
 };
+
 
 export const projects: Project[] = [
   {
@@ -571,6 +588,54 @@ export const projects: Project[] = [
     cover: energizeResortCoverUpload.url,
     gallery: energizeResortNashikGallery,
     description: "A hospitality destination designed around relaxation, recreation, and connection with nature. The project creates immersive experiences through thoughtful planning, landscape integration, and inviting communal spaces.",
+  },
+  {
+    slug: "maple",
+    name: "Maple",
+    sector: "Industrial",
+    location: "",
+    year: "",
+    area: "",
+    scope: "Architecture",
+    category: "Architecture",
+    cover: mapleGateAerial.url,
+    gallery: [
+      mapleGateAerial.url,
+      mapleGateNight.url,
+      mapleGateRev01.url,
+      mapleGateRev02.url,
+      mapleGate02.url,
+      mapleGate03.url,
+      mapleNeedlePlant.url,
+    ],
+    description: "A master-planned industrial development composed of distinct facilities — a landmark gateway, an immersive sales experience, a refined needle plant, and a sculptural warehouse — unified by a shared architectural language of rhythm, light, and material precision.",
+    facilities: [
+      {
+        name: "Maple Main Gate",
+        description: "More than an entry point, the gateway serves as a landmark arrival experience that reflects the ambition and identity of the development.",
+        images: [
+          mapleGateAerial.url,
+          mapleGateNight.url,
+          mapleGateRev01.url,
+          mapleGateRev02.url,
+          mapleGate02.url,
+          mapleGate03.url,
+        ],
+      },
+      {
+        name: "Maple Sales Office",
+        description: "With its dramatic cantilevers and seamless glass envelope, the project transforms the sales journey into an immersive spatial experience.",
+      },
+      {
+        name: "Maple Needle Plant",
+        description: "A contemporary industrial facility that elevates manufacturing architecture through rhythm, proportion, and refined material expression.",
+        images: [mapleNeedlePlant.url],
+      },
+      {
+        name: "Maple Warehouse",
+        description: "Expressive vertical elements and clean structural lines transform a functional facility into a distinguished industrial landmark.",
+      },
+    ],
   },
   {
     slug: "meril-park-1",
