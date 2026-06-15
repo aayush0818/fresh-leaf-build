@@ -112,7 +112,54 @@ export function Verticals() {
       </header>
 
       <div className="vx-grid">
-        {/* LEFT — dominant image */}
+        {/* LEFT — sector list */}
+        <div className="vx-list">
+          <ul className="vx-sectors">
+            {items.map((it, i) => {
+              const isActive = i === idx;
+              return (
+                <li key={`${group.key}-${it.name}`} className={`vx-row${isActive ? " is-active" : ""}`}>
+                  <Link
+                    to="/projects/$category"
+                    params={{ category: group.key }}
+                    search={{ sector: it.sectorSlug }}
+                    className="vx-row-btn"
+                    data-hover
+                    onMouseEnter={() => setActive(i)}
+                    onFocus={() => setActive(i)}
+                  >
+                    <span className="vx-row-num">{String(i + 1).padStart(2, "0")}</span>
+                    <span className="vx-row-body">
+                      <span className="vx-row-name">{it.name}</span>
+                      <AnimatePresence initial={false}>
+                        {isActive && (
+                          <motion.span
+                            key="tag"
+                            className="vx-row-tag"
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: "auto" }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={FADE}
+                          >
+                            {it.tagline}
+                          </motion.span>
+                        )}
+                      </AnimatePresence>
+                    </span>
+                    <span className="vx-row-rule" aria-hidden />
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+
+          <Link to="/projects/$category" params={{ category: group.key }} className="vx-cta" data-hover>
+            <span>Explore {group.label}</span>
+            <span className="vx-cta-rule" aria-hidden />
+          </Link>
+        </div>
+
+        {/* RIGHT — dominant image */}
         <div className="vx-media">
           <div className="vx-media-frame">
             <AnimatePresence mode="wait">
@@ -143,52 +190,6 @@ export function Verticals() {
               <p className="vx-media-badge-loc">{current.feature.location}</p>
             </motion.div>
           </AnimatePresence>
-        </div>
-
-        {/* RIGHT — sector list */}
-        <div className="vx-list">
-          <ul className="vx-sectors">
-            {items.map((it, i) => {
-              const isActive = i === idx;
-              return (
-                <li key={`${group.key}-${it.name}`} className={`vx-row${isActive ? " is-active" : ""}`}>
-                  <button
-                    type="button"
-                    className="vx-row-btn"
-                    data-hover
-                    onMouseEnter={() => setActive(i)}
-                    onFocus={() => setActive(i)}
-                    onClick={() => setActive(i)}
-                  >
-                    <span className="vx-row-num">{String(i + 1).padStart(2, "0")}</span>
-                    <span className="vx-row-body">
-                      <span className="vx-row-name">{it.name}</span>
-                      <AnimatePresence initial={false}>
-                        {isActive && (
-                          <motion.span
-                            key="tag"
-                            className="vx-row-tag"
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={FADE}
-                          >
-                            {it.tagline}
-                          </motion.span>
-                        )}
-                      </AnimatePresence>
-                    </span>
-                    <span className="vx-row-rule" aria-hidden />
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
-
-          <a className="vx-cta" href={group.href} data-hover>
-            <span>Explore {group.label}</span>
-            <span className="vx-cta-rule" aria-hidden />
-          </a>
         </div>
       </div>
     </section>
