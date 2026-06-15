@@ -7,6 +7,7 @@ const { institutional: inst, residential: res, commercial: com } = realImages;
 
 type Vertical = {
   name: string;
+  sectorSlug: string;
   tagline: string;
   feature: { name: string; location: string };
   img: string;
