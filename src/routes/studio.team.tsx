@@ -20,11 +20,7 @@ export const Route = createFileRoute("/studio/team")({
   component: TeamPage,
 });
 
-const EASE = [0.22, 1, 0.36, 1] as const;
-
 function TeamPage() {
-  const [open, setOpen] = useState<string | null>(null);
-
   return (
     <>
       <CinematicHero
