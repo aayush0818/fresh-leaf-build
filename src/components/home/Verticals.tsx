@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "@tanstack/react-router";
-import { realImages } from "@/data/realImages";
-
-const { institutional: inst, residential: res, commercial: com } = realImages;
+import archCommercial from "@/assets/verticals/arch-commercial.png.asset.json";
+import archInstitutional from "@/assets/verticals/arch-institutional.png.asset.json";
+import archResidential from "@/assets/verticals/arch-residential.png.asset.json";
+import hospitalityImg from "@/assets/verticals/hospitality.png.asset.json";
+import intResidential from "@/assets/verticals/int-residential.png.asset.json";
+import intCommercial from "@/assets/verticals/int-commercial.png.asset.json";
 
 type Vertical = {
   name: string;
