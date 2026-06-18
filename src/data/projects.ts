@@ -372,6 +372,15 @@ import quest23 from "@/assets/quest-clubhouse-23.jpg.asset.json";
 import quest83 from "@/assets/quest-clubhouse-83.jpg.asset.json";
 import quest80 from "@/assets/quest-clubhouse-80.jpg.asset.json";
 
+// Laxmi Kunj — Architecture · Residential
+import laxmiKunj1 from "@/assets/laxmi-kunj-1.jpg.asset.json";
+// Proximus — Architecture · Residential
+import proximus1 from "@/assets/proximus-1.jpg.asset.json";
+import proximus2 from "@/assets/proximus-2.jpg.asset.json";
+// Glasswood Retreat — Architecture · Residential
+import glasswood1 from "@/assets/glasswood-1.jpg.asset.json";
+import glasswood2 from "@/assets/glasswood-2.jpg.asset.json";
+
 const bodyGoalsGallery = [bg1.url, bg2.url, bg3.url, bg5.url, bg6.url, bg8.url, bg9.url, bg10.url, bg11.url, bg12.url, bg16.url, bg17.url, bg18.url, bg19.url];
 const noirResidenceGallery = [
   nr66.url,
