@@ -491,16 +491,10 @@ import linearEstate8 from "@/assets/linear-estate-8.jpg.asset.json";
 // Lantern Villa — Architecture · Residential
 import lanternVilla1 from "@/assets/lantern-villa-1.jpg.asset.json";
 import lanternVilla2 from "@/assets/lantern-villa-2.jpg.asset.json";
-import pavilionEstate1 from "@/assets/pavilion-estate-1.jpg.asset.json";
-import pavilionEstate2 from "@/assets/pavilion-estate-2.jpg.asset.json";
-import pavilionEstate3 from "@/assets/pavilion-estate-3.jpg.asset.json";
-import pavilionEstate4 from "@/assets/pavilion-estate-4.jpg.asset.json";
-import pavilionEstate5 from "@/assets/pavilion-estate-5.jpg.asset.json";
-import pavilionEstate6 from "@/assets/pavilion-estate-6.jpg.asset.json";
-import pavilionEstate7 from "@/assets/pavilion-estate-7.jpg.asset.json";
-import pavilionEstate8 from "@/assets/pavilion-estate-8.jpg.asset.json";
-import pavilionEstate9 from "@/assets/pavilion-estate-9.jpg.asset.json";
-import pavilionEstate10 from "@/assets/pavilion-estate-10.jpg.asset.json";
+import lanternVilla3 from "@/assets/lantern-villa-3.jpg.asset.json";
+import lanternVilla4 from "@/assets/lantern-villa-4.jpg.asset.json";
+import lanternVilla5 from "@/assets/lantern-villa-5.jpg.asset.json";
+import lanternVilla6 from "@/assets/lantern-villa-6.jpg.asset.json";
 import porticoHouse1 from "@/assets/portico-house-1.jpg.asset.json";
 import porticoHouse2 from "@/assets/portico-house-2.jpg.asset.json";
 import porticoHouse3 from "@/assets/portico-house-3.jpg.asset.json";
@@ -511,6 +505,20 @@ import porticoHouse7 from "@/assets/portico-house-7.jpg.asset.json";
 import porticoHouse8 from "@/assets/portico-house-8.jpg.asset.json";
 import porticoHouse9 from "@/assets/portico-house-9.jpg.asset.json";
 import porticoHouse10 from "@/assets/portico-house-10.jpg.asset.json";
+import porticoHouse11 from "@/assets/portico-house-11.jpg.asset.json";
+import porticoHouse12 from "@/assets/portico-house-12.jpg.asset.json";
+
+import pavilionEstate1 from "@/assets/pavilion-estate-1.jpg.asset.json";
+import pavilionEstate2 from "@/assets/pavilion-estate-2.jpg.asset.json";
+import pavilionEstate3 from "@/assets/pavilion-estate-3.jpg.asset.json";
+import pavilionEstate4 from "@/assets/pavilion-estate-4.jpg.asset.json";
+import pavilionEstate5 from "@/assets/pavilion-estate-5.jpg.asset.json";
+import pavilionEstate6 from "@/assets/pavilion-estate-6.jpg.asset.json";
+import pavilionEstate7 from "@/assets/pavilion-estate-7.jpg.asset.json";
+import pavilionEstate8 from "@/assets/pavilion-estate-8.jpg.asset.json";
+import pavilionEstate9 from "@/assets/pavilion-estate-9.jpg.asset.json";
+import pavilionEstate10 from "@/assets/pavilion-estate-10.jpg.asset.json";
+
 import panoramaHouseHero from "@/assets/panorama-house-hero.jpg.asset.json";
 import panoramaHouse1 from "@/assets/panorama-house-1.jpg.asset.json";
 import panoramaHouse2 from "@/assets/panorama-house-2.jpg.asset.json";
@@ -920,7 +928,7 @@ export const projects: Project[] = [
     scope: "Architecture",
     category: "Architecture",
     cover: porticoHouse1.url,
-    gallery: [porticoHouse1.url, porticoHouse2.url, porticoHouse3.url, porticoHouse4.url, porticoHouse5.url, porticoHouse6.url, porticoHouse7.url, porticoHouse8.url, porticoHouse9.url, porticoHouse10.url],
+    gallery: [porticoHouse1.url, porticoHouse2.url, porticoHouse3.url, porticoHouse4.url, porticoHouse5.url, porticoHouse6.url, porticoHouse7.url, porticoHouse8.url, porticoHouse9.url, porticoHouse10.url, porticoHouse11.url, porticoHouse12.url],
     description: "Set within expansive greens, the architecture embraces outdoor living through deep verandas, framed views, and seamless transitions.",
   },
   {
@@ -946,7 +954,7 @@ export const projects: Project[] = [
     scope: "Architecture",
     category: "Architecture",
     cover: lanternVilla2.url,
-    gallery: [lanternVilla1.url, lanternVilla2.url],
+    gallery: [lanternVilla1.url, lanternVilla2.url, lanternVilla3.url, lanternVilla4.url, lanternVilla5.url, lanternVilla6.url],
     description: "Defined by vertical timber elements and symmetrical massing, the residence combines warmth and precision. The interplay of light, materiality, and proportion creates a home that feels both contemporary and timeless.",
   },
   {
