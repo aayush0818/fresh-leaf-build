@@ -478,6 +478,20 @@ import mapleSales05 from "@/assets/maple-sales-05.jpeg.asset.json";
 import mapleWarehouse01 from "@/assets/maple-warehouse-01.jpeg.asset.json";
 import mapleWarehouse02 from "@/assets/maple-warehouse-02.jpeg.asset.json";
 
+// Linear Estate — Architecture · Residential
+import linearEstate1 from "@/assets/linear-estate-1.jpg.asset.json";
+import linearEstate2 from "@/assets/linear-estate-2.jpg.asset.json";
+import linearEstate3 from "@/assets/linear-estate-3.jpg.asset.json";
+import linearEstate4 from "@/assets/linear-estate-4.jpg.asset.json";
+import linearEstate5 from "@/assets/linear-estate-5.jpg.asset.json";
+import linearEstate6 from "@/assets/linear-estate-6.jpg.asset.json";
+import linearEstate7 from "@/assets/linear-estate-7.jpg.asset.json";
+import linearEstate8 from "@/assets/linear-estate-8.jpg.asset.json";
+
+// Lantern Villa — Architecture · Residential
+import lanternVilla1 from "@/assets/lantern-villa-1.jpg.asset.json";
+import lanternVilla2 from "@/assets/lantern-villa-2.jpg.asset.json";
+
 export type Facility = {
   name: string;
   description: string;
@@ -839,6 +853,32 @@ export const projects: Project[] = [
     cover: courtyardTwins1.url,
     gallery: [courtyardTwins1.url, courtyardTwins2.url, courtyardTwins3.url, courtyardTwins4.url],
     description: "The Twin Frame bungalows transform the idea of paired living into a cohesive architectural statement. Framed by bold geometric forms and softened through natural materials and light, the design celebrates proportion, rhythm, and visual continuity. Generous terraces, open interiors, and shared landscape elements bring a resort-like quality to everyday living, creating homes that are both private and connected.",
+  },
+  {
+    slug: "linear-estate",
+    name: "Linear Estate",
+    sector: "Residential",
+    location: "",
+    year: "",
+    area: "",
+    scope: "Architecture",
+    category: "Architecture",
+    cover: linearEstate1.url,
+    gallery: [linearEstate1.url, linearEstate2.url, linearEstate3.url, linearEstate4.url, linearEstate5.url, linearEstate6.url, linearEstate7.url, linearEstate8.url],
+    description: "A residential masterplan composed of contemporary villas, landscaped streets, and community spaces. Defined by clean geometry and generous open areas, the development balances privacy, connectivity, and everyday living within a cohesive architectural language.",
+  },
+  {
+    slug: "lantern-villa",
+    name: "Lantern Villa",
+    sector: "Residential",
+    location: "",
+    year: "",
+    area: "",
+    scope: "Architecture",
+    category: "Architecture",
+    cover: lanternVilla2.url,
+    gallery: [lanternVilla1.url, lanternVilla2.url],
+    description: "Defined by vertical timber elements and symmetrical massing, the residence combines warmth and precision. The interplay of light, materiality, and proportion creates a home that feels both contemporary and timeless.",
   },
   {
     slug: "the-ridge-house",
