@@ -491,6 +491,16 @@ import linearEstate8 from "@/assets/linear-estate-8.jpg.asset.json";
 // Lantern Villa — Architecture · Residential
 import lanternVilla1 from "@/assets/lantern-villa-1.jpg.asset.json";
 import lanternVilla2 from "@/assets/lantern-villa-2.jpg.asset.json";
+import pavilionEstate1 from "@/assets/pavilion-estate-1.jpg.asset.json";
+import pavilionEstate2 from "@/assets/pavilion-estate-2.jpg.asset.json";
+import pavilionEstate3 from "@/assets/pavilion-estate-3.jpg.asset.json";
+import pavilionEstate4 from "@/assets/pavilion-estate-4.jpg.asset.json";
+import pavilionEstate5 from "@/assets/pavilion-estate-5.jpg.asset.json";
+import pavilionEstate6 from "@/assets/pavilion-estate-6.jpg.asset.json";
+import pavilionEstate7 from "@/assets/pavilion-estate-7.jpg.asset.json";
+import pavilionEstate8 from "@/assets/pavilion-estate-8.jpg.asset.json";
+import pavilionEstate9 from "@/assets/pavilion-estate-9.jpg.asset.json";
+import pavilionEstate10 from "@/assets/pavilion-estate-10.jpg.asset.json";
 
 export type Facility = {
   name: string;
