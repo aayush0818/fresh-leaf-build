@@ -22,7 +22,7 @@ export function MaskText({ children, delay = 0, stagger = 0.08, duration = 1.1, 
     : [children];
   const Tag = as as any;
   return (
-    <Tag className={className}>
+    <Tag className={className} style={style}>
       {lines.map((line, i) => (
         <span key={i} className="idlx-mask-line">
           <motion.span
