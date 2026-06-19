@@ -606,6 +606,19 @@ export const projects: Project[] = [
     description: "A purpose-built venue designed to enhance learning, dialogue, and large-scale gatherings. Its thoughtful planning ensures comfort, visibility, and a seamless audience experience.",
   },
   {
+    slug: "aditya-birla-asthavinayak",
+    name: "Aditya Birla Asthavinayak",
+    sector: "Institutional",
+    location: "",
+    year: "",
+    area: "",
+    scope: "Architecture",
+    category: "Architecture",
+    cover: abAstha1.url,
+    gallery: adityaBirlaAsthavinayakGallery,
+    description: "A spiritual destination designed to celebrate faith, culture, and collective experience. Through carefully planned landscapes, gathering spaces, and traditional architectural elements, the project creates a serene and immersive environment.",
+  },
+  {
     slug: "divya-enclave",
     name: "Divya Enclave",
     sector: "Hospitality",
@@ -618,6 +631,7 @@ export const projects: Project[] = [
     gallery: divyaEnclaveGallery,
     description: "A community-centric clubhouse that brings leisure, wellness, and social interaction together. Designed as an extension of everyday living, it offers spaces that encourage gathering and recreation.",
   },
+
   {
     slug: "adarsh-vidya-mandir-rajasthan",
     name: "Adarsh Vidya Mandir School — Rajasthan",
