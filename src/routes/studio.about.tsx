@@ -6,33 +6,26 @@ import { Marquee } from "@/components/motion/Marquee";
 
 
 import heroImg from "@/assets/idl/PAB9031-HDR.jpg.asset.json";
-import cultureImg from "@/assets/idl/PAB9126-HDR.jpg.asset.json";
-import teamImg from "@/assets/idl/PAB9071-HDR.jpg.asset.json";
-import work2Img from "@/assets/idl/PAB9081-HDR.jpg.asset.json";
-import work4Img from "@/assets/idl/PAB9186-HDR.jpg.asset.json";
 import mvvImg from "@/assets/idl/PAB9056-HDR.jpg.asset.json";
-import cafeImg from "@/assets/idl/PAB9171-HDR.jpg.asset.json";
-import receptionImg from "@/assets/idl/PAB9041-HDR.jpg.asset.json";
+import rangeImg from "@/assets/idl/PAB9126-HDR.jpg.asset.json";
+import cultureLeftImg from "@/assets/idl/PAB9071-HDR.jpg.asset.json";
+import cultureRightImg from "@/assets/idl/PAB8838-HDR.jpg.asset.json";
+import bottomSplitOne from "@/assets/idl/PAB9081-HDR.jpg.asset.json";
+import bottomSplitTwo from "@/assets/idl/PAB9186-HDR.jpg.asset.json";
 import boardroomImg from "@/assets/idl/about-split-1.png.asset.json";
 import manifestoImg from "@/assets/PAB9021-HDR_1.jpg.asset.json";
 import splitTwoImg from "@/assets/idl/about-split-2.png.asset.json";
 
 const studioHero = heroImg.url;
-const studioCulture = cultureImg.url;
-const teamHero = teamImg.url;
-const work2 = work2Img.url;
-const work4 = work4Img.url;
 
 import {
   aboutCopy,
   mission,
   vision,
   values,
-  idlStudioNarrative,
   rangeOfExperience,
   recognitionList,
   cultureBlocks,
-  partners,
 } from "@/data/siteContent";
 
 export const Route = createFileRoute("/studio/about")({
@@ -99,20 +92,13 @@ function AboutPage() {
         </div>
       </div>
 
-      {/* Pullquote */}
-      <section className="idlx-pullquote idlx-section--bordered">
-        <Reveal>
-          <p>{aboutCopy.signoff}</p>
-        </Reveal>
-      </section>
-
-      {/* Mission / Vision / Values */}
+      {/* Mission / Vision */}
       <section className="idlx-section idlx-section--bordered">
         <Reveal>
           <span className="idlx-eyebrow"><span className="idlx-eyebrow-dot" /> The conviction</span>
         </Reveal>
-        <div style={{ height: 60 }} />
-        <div className="idlx-mvv">
+        <div style={{ height: 36 }} />
+        <div className="idlx-mvv" style={{ gridTemplateColumns: "repeat(2, minmax(0,1fr))" }}>
           <Reveal>
             <div className="idlx-mvv-block">
               <span className="idlx-eyebrow">{mission.eyebrow}</span>
@@ -125,17 +111,11 @@ function AboutPage() {
               <p className="idlx-lead" style={{ fontSize: "clamp(20px,1.8vw,26px)" }}>{vision.text}</p>
             </div>
           </Reveal>
-          <Reveal delay={0.2}>
-            <div className="idlx-mvv-block">
-              <span className="idlx-eyebrow"></span>
-              <p className="idlx-body">{"\n"}</p>
-            </div>
-          </Reveal>
         </div>
       </section>
 
       {/* Values list */}
-      <section className="idlx-section--sm" style={{ padding: "0 clamp(28px,6vw,120px) clamp(80px,12vw,160px)" }}>
+      <section className="idlx-section--sm" style={{ padding: "0 clamp(28px,6vw,120px) clamp(56px,8vw,96px)" }}>
         <div className="idlx-values">
           {values.map((v, i) => (
             <Reveal key={v.title} delay={i * 0.06}>
@@ -149,26 +129,11 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Split: IDL Studio narrative */}
-      <div className="idlx-split">
-        <div className="idlx-split-img">
-          <Reveal>
-            <img src={studioCulture} alt="Studio life — drawings, samples and the long table" loading="lazy" />
-          </Reveal>
-        </div>
-        <div className="idlx-split-body">
-          <Reveal>
-            <span className="idlx-eyebrow">{idlStudioNarrative.eyebrow}</span>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <MaskText as="h2" className="idlx-h2">{idlStudioNarrative.headline}</MaskText>
-          </Reveal>
-          {idlStudioNarrative.body.map((p, i) => (
-            <Reveal key={i} delay={0.2 + i * 0.08}>
-              <p className="idlx-body idlx-body--lg">{p}</p>
-            </Reveal>
-          ))}
-        </div>
+      {/* Full bleed image break */}
+      <div style={{ width: "100%", aspectRatio: "21 / 9", overflow: "hidden" }}>
+        <Reveal>
+          <img src={mvvImg.url} alt="IDL studio detail" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+        </Reveal>
       </div>
 
       {/* Range of experience */}
@@ -197,13 +162,19 @@ function AboutPage() {
         </div>
       </section>
 
+      {/* Split image break */}
+      <div className="idlx-split">
+        <div className="idlx-split-img"><img src={rangeImg.url} alt="Studio working environment" loading="lazy" /></div>
+        <div className="idlx-split-img"><img src={cultureLeftImg.url} alt="Studio interior" loading="lazy" /></div>
+      </div>
+
       {/* Recognition */}
       <section className="idlx-section idlx-section--bordered">
         <Reveal>
           <span className="idlx-eyebrow"><span className="idlx-eyebrow-dot" /> Industry Recognition</span>
-          <h2 className="idlx-h2" style={{ marginTop: 24, maxWidth: 760 }}>Quiet acknowledgement, over three decades.</h2>
+          <h2 className="idlx-h2" style={{ marginTop: 20, maxWidth: 760 }}>Quiet acknowledgement, over three decades.</h2>
         </Reveal>
-        <div style={{ height: 60 }} />
+        <div style={{ height: 40 }} />
         <div className="idlx-awards">
           {recognitionList.map((r, i) => (
             <Reveal key={r.award} delay={i * 0.04}>
@@ -217,20 +188,20 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Marquee — image strip */}
+      {/* Marquee */}
       <Marquee speed={50}>
         <span>— Mumbai · Ahmedabad · India · Middle East · Africa</span>
         <span>— Architecture · Interiors · Planning · Engineering</span>
         <span>— Residential · Commercial · Hospitality · Industrial · Institutional · Workplace</span>
       </Marquee>
 
-      {/* Culture / Internships / Mentorship / Working at IDL */}
+      {/* Culture */}
       <section className="idlx-section idlx-section--bordered">
         <Reveal>
           <span className="idlx-eyebrow"><span className="idlx-eyebrow-dot" /> Culture</span>
-          <h2 className="idlx-h2" style={{ marginTop: 24, maxWidth: 760 }}>How the studio works, every day.</h2>
+          <h2 className="idlx-h2" style={{ marginTop: 20, maxWidth: 760 }}>How the studio works, every day.</h2>
         </Reveal>
-        <div style={{ height: 60 }} />
+        <div style={{ height: 40 }} />
         <div className="idlx-culture">
           {cultureBlocks.map((c, i) => (
             <Reveal key={c.title} delay={i * 0.08}>
@@ -244,36 +215,11 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* Strip */}
+      {/* Closing split */}
       <div className="idlx-split">
-        <div className="idlx-split-img"><img src={receptionImg.url} alt="Studio reception" loading="lazy" /></div>
-        <div className="idlx-split-img"><img src={cafeImg.url} alt="Studio cafe and breakout" loading="lazy" /></div>
+        <div className="idlx-split-img"><img src={bottomSplitOne.url} alt="Studio detail" loading="lazy" /></div>
+        <div className="idlx-split-img"><img src={bottomSplitTwo.url} alt="Studio detail" loading="lazy" /></div>
       </div>
-
-      {/* Leadership */}
-      <section className="idlx-section idlx-section--bordered">
-        <Reveal>
-          <span className="idlx-eyebrow"><span className="idlx-eyebrow-dot" /> The Minds Behind IDL</span>
-          <h2 className="idlx-h2" style={{ marginTop: 24, maxWidth: 760 }}>Four ways of thinking. Four ways of seeing. One mark that holds us all.</h2>
-        </Reveal>
-        <div style={{ height: 60 }} />
-        <div className="idlx-team-grid">
-          {partners.map((p, i) => (
-            <Reveal key={p.name} delay={(i % 2) * 0.1}>
-              <div className="idlx-portrait">
-                <div className="idlx-portrait-img">
-                  <img src={p.image} alt={p.name} loading="lazy" />
-                </div>
-                <div className="idlx-portrait-cap">
-                  <span className="idlx-portrait-role">{p.role} · {p.years}</span>
-                  <span className="idlx-portrait-name">{p.name}</span>
-                  <p className="idlx-portrait-bio">{p.bio}</p>
-                </div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="idlx-cta idlx-section--bordered">
@@ -283,7 +229,7 @@ function AboutPage() {
         <Reveal delay={0.1}>
           <Link to="/contact" className="idlx-cta-link" data-hover>Contact the Studio →</Link>
         </Reveal>
-        <img src={work4} alt="" loading="lazy" style={{ display: "none" }} />
+        <img src={cultureRightImg.url} alt="" loading="lazy" style={{ display: "none" }} />
       </section>
     </>
   );
