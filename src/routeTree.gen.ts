@@ -12,7 +12,9 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as StudioRouteImport } from './routes/studio'
 import { Route as ProjectsRouteImport } from './routes/projects'
 import { Route as PracticeRouteImport } from './routes/practice'
+import { Route as MediaRecognitionRouteImport } from './routes/media-recognition'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as AwardsRouteImport } from './routes/awards'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as StudioTeamRouteImport } from './routes/studio.team'
 import { Route as StudioHistoryRouteImport } from './routes/studio.history'
@@ -22,6 +24,7 @@ import { Route as ProjectSlugRouteImport } from './routes/project.$slug'
 import { Route as PracticeProcessRouteImport } from './routes/practice.process'
 import { Route as PracticeJournalRouteImport } from './routes/practice.journal'
 import { Route as PracticeHistoryRouteImport } from './routes/practice.history'
+import { Route as MediaRecognitionSlugRouteImport } from './routes/media-recognition.$slug'
 import { Route as PracticeJournalSlugRouteImport } from './routes/practice.journal.$slug'
 
 const StudioRoute = StudioRouteImport.update({
@@ -39,9 +42,19 @@ const PracticeRoute = PracticeRouteImport.update({
   path: '/practice',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MediaRecognitionRoute = MediaRecognitionRouteImport.update({
+  id: '/media-recognition',
+  path: '/media-recognition',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AwardsRoute = AwardsRouteImport.update({
+  id: '/awards',
+  path: '/awards',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -89,6 +102,11 @@ const PracticeHistoryRoute = PracticeHistoryRouteImport.update({
   path: '/history',
   getParentRoute: () => PracticeRoute,
 } as any)
+const MediaRecognitionSlugRoute = MediaRecognitionSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => MediaRecognitionRoute,
+} as any)
 const PracticeJournalSlugRoute = PracticeJournalSlugRouteImport.update({
   id: '/$slug',
   path: '/$slug',
@@ -97,10 +115,13 @@ const PracticeJournalSlugRoute = PracticeJournalSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/awards': typeof AwardsRoute
   '/contact': typeof ContactRoute
+  '/media-recognition': typeof MediaRecognitionRouteWithChildren
   '/practice': typeof PracticeRouteWithChildren
   '/projects': typeof ProjectsRouteWithChildren
   '/studio': typeof StudioRouteWithChildren
+  '/media-recognition/$slug': typeof MediaRecognitionSlugRoute
   '/practice/history': typeof PracticeHistoryRoute
   '/practice/journal': typeof PracticeJournalRouteWithChildren
   '/practice/process': typeof PracticeProcessRoute
@@ -113,10 +134,13 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/awards': typeof AwardsRoute
   '/contact': typeof ContactRoute
+  '/media-recognition': typeof MediaRecognitionRouteWithChildren
   '/practice': typeof PracticeRouteWithChildren
   '/projects': typeof ProjectsRouteWithChildren
   '/studio': typeof StudioRouteWithChildren
+  '/media-recognition/$slug': typeof MediaRecognitionSlugRoute
   '/practice/history': typeof PracticeHistoryRoute
   '/practice/journal': typeof PracticeJournalRouteWithChildren
   '/practice/process': typeof PracticeProcessRoute
@@ -130,10 +154,13 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/awards': typeof AwardsRoute
   '/contact': typeof ContactRoute
+  '/media-recognition': typeof MediaRecognitionRouteWithChildren
   '/practice': typeof PracticeRouteWithChildren
   '/projects': typeof ProjectsRouteWithChildren
   '/studio': typeof StudioRouteWithChildren
+  '/media-recognition/$slug': typeof MediaRecognitionSlugRoute
   '/practice/history': typeof PracticeHistoryRoute
   '/practice/journal': typeof PracticeJournalRouteWithChildren
   '/practice/process': typeof PracticeProcessRoute
@@ -148,10 +175,13 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/awards'
     | '/contact'
+    | '/media-recognition'
     | '/practice'
     | '/projects'
     | '/studio'
+    | '/media-recognition/$slug'
     | '/practice/history'
     | '/practice/journal'
     | '/practice/process'
@@ -164,10 +194,13 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/awards'
     | '/contact'
+    | '/media-recognition'
     | '/practice'
     | '/projects'
     | '/studio'
+    | '/media-recognition/$slug'
     | '/practice/history'
     | '/practice/journal'
     | '/practice/process'
@@ -180,10 +213,13 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/awards'
     | '/contact'
+    | '/media-recognition'
     | '/practice'
     | '/projects'
     | '/studio'
+    | '/media-recognition/$slug'
     | '/practice/history'
     | '/practice/journal'
     | '/practice/process'
@@ -197,7 +233,9 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AwardsRoute: typeof AwardsRoute
   ContactRoute: typeof ContactRoute
+  MediaRecognitionRoute: typeof MediaRecognitionRouteWithChildren
   PracticeRoute: typeof PracticeRouteWithChildren
   ProjectsRoute: typeof ProjectsRouteWithChildren
   StudioRoute: typeof StudioRouteWithChildren
@@ -227,11 +265,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PracticeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/media-recognition': {
+      id: '/media-recognition'
+      path: '/media-recognition'
+      fullPath: '/media-recognition'
+      preLoaderRoute: typeof MediaRecognitionRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
       fullPath: '/contact'
       preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/awards': {
+      id: '/awards'
+      path: '/awards'
+      fullPath: '/awards'
+      preLoaderRoute: typeof AwardsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -297,6 +349,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PracticeHistoryRouteImport
       parentRoute: typeof PracticeRoute
     }
+    '/media-recognition/$slug': {
+      id: '/media-recognition/$slug'
+      path: '/$slug'
+      fullPath: '/media-recognition/$slug'
+      preLoaderRoute: typeof MediaRecognitionSlugRouteImport
+      parentRoute: typeof MediaRecognitionRoute
+    }
     '/practice/journal/$slug': {
       id: '/practice/journal/$slug'
       path: '/$slug'
@@ -306,6 +365,17 @@ declare module '@tanstack/react-router' {
     }
   }
 }
+
+interface MediaRecognitionRouteChildren {
+  MediaRecognitionSlugRoute: typeof MediaRecognitionSlugRoute
+}
+
+const MediaRecognitionRouteChildren: MediaRecognitionRouteChildren = {
+  MediaRecognitionSlugRoute: MediaRecognitionSlugRoute,
+}
+
+const MediaRecognitionRouteWithChildren =
+  MediaRecognitionRoute._addFileChildren(MediaRecognitionRouteChildren)
 
 interface PracticeJournalRouteChildren {
   PracticeJournalSlugRoute: typeof PracticeJournalSlugRoute
@@ -364,7 +434,9 @@ const StudioRouteWithChildren =
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AwardsRoute: AwardsRoute,
   ContactRoute: ContactRoute,
+  MediaRecognitionRoute: MediaRecognitionRouteWithChildren,
   PracticeRoute: PracticeRouteWithChildren,
   ProjectsRoute: ProjectsRouteWithChildren,
   StudioRoute: StudioRouteWithChildren,
