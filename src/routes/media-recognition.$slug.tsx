@@ -6,9 +6,9 @@ import { Footer } from "@/components/home/Footer";
 import { CustomCursor } from "@/components/home/CustomCursor";
 import { journalPosts } from "@/data/siteContent";
 
-export const Route = createFileRoute("/journal/news/$slug")({
+export const Route = createFileRoute("/media-recognition/$slug")({
   beforeLoad: ({ params }) => {
-    if (!journalPosts.find((p) => p.slug === params.slug)) throw redirect({ to: "/journal/news" });
+    if (!journalPosts.find((p) => p.slug === params.slug)) throw redirect({ to: "/media-recognition" });
   },
   component: ArticlePage,
 });
@@ -25,7 +25,7 @@ function ArticlePage() {
       <Header />
       <motion.div className="idlx-essay-progress" style={{ scaleX: scrollYProgress }} />
       <article className="idlx-page idlx-essay" ref={ref}>
-        <Link to="/journal/news" className="idlx-essay-back" data-hover>← News</Link>
+        <Link to="/media-recognition" className="idlx-essay-back" data-hover>← Media Recognition</Link>
         <header>
           <span className="idlx-jrn-meta">{post.category} · {post.date}</span>
           <h1>{post.title}</h1>

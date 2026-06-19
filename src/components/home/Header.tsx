@@ -43,12 +43,12 @@ const NAV: NavItem[] = [
   },
   {
     label: "Awards & Recognition",
-    to: "/journal",
+    to: "/awards",
     image: navNews,
-    blurb: "Awards, publications, milestones, and the partnerships that have shaped our journey.",
+    blurb: "Awards, publications, and the milestones that have shaped our journey.",
     children: [
-      { label: "Media Recognition", to: "/journal/news" },
-      { label: "Awards", to: "/journal/awards" },
+      { label: "Awards", to: "/awards" },
+      { label: "Media Recognition", to: "/media-recognition" },
     ],
   },
   {
