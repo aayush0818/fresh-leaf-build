@@ -111,11 +111,13 @@ function ContactPage() {
             <p className="idlx-ig-lead">
               Follow our latest projects, publications, studio updates, and architectural insights.
             </p>
-            <div className="idlx-ig-feed">
-              <div
-                className="elfsight-app-41b2e8ed-d5a5-4d65-9789-65526979679e"
-                data-elfsight-app-lazy
-              />
+            <div className="idlx-ig-feed" suppressHydrationWarning>
+              {mounted ? (
+                <div
+                  className="elfsight-app-41b2e8ed-d5a5-4d65-9789-65526979679e"
+                  data-elfsight-app-lazy
+                />
+              ) : null}
             </div>
             <p className="idlx-ig-links">
               <a href={contactCopy.instagram} target="_blank" rel="noreferrer" data-hover>
