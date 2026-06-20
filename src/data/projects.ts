@@ -73,6 +73,10 @@ import dcp1 from "@/assets/d-cp-office-belapur-1.jpg.asset.json";
 import dcp2 from "@/assets/d-cp-office-belapur-2.jpg.asset.json";
 import dcp3 from "@/assets/d-cp-office-belapur-3.jpg.asset.json";
 import dcp4 from "@/assets/d-cp-office-belapur-4.jpg.asset.json";
+import dcp5 from "@/assets/d-cp-office-belapur-5.jpg.asset.json";
+import dcp6 from "@/assets/d-cp-office-belapur-6.jpg.asset.json";
+import dcp7 from "@/assets/d-cp-office-belapur-7.jpg.asset.json";
+import dcp8 from "@/assets/d-cp-office-belapur-8.jpg.asset.json";
 
 // APJ Abdul Kalam Auditorium — Pune (Architecture · Institutional)
 import apj1 from "@/assets/apj-auditorium-1.jpg.asset.json";
@@ -404,6 +408,7 @@ import metroDel2 from "@/assets/metro-hospital-delhi-2.jpg.asset.json";
 import tataRallis1 from "@/assets/tata-rallis-bangalore-1.jpg.asset.json";
 import tataRallis2 from "@/assets/tata-rallis-bangalore-2.jpg.asset.json";
 import tataRallis3 from "@/assets/tata-rallis-bangalore-3.jpg.asset.json";
+import tataRallis4 from "@/assets/tata-rallis-bangalore-4.jpg.asset.json";
 
 // IIG Institute — Colaba (Architecture · Institutional)
 import iigColaba1 from "@/assets/iig-institute-colaba-1.jpg.asset.json";
