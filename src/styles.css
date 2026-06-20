@@ -2222,8 +2222,9 @@ a:hover .img-reveal-wrap .img-parallax {
 .idlx-mono-fig img { width: 100%; height: auto; display: block; }
 .idlx-mono-fig--full { width: 100%; }
 .idlx-mono-fig--inset { max-width: 1100px; margin: 0 auto; padding: 0 clamp(28px, 6vw, 100px); }
-.idlx-mono-pair { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 3vw, 40px); padding: 0 clamp(28px, 6vw, 100px); }
-.idlx-mono-pair img { aspect-ratio: 3/4; object-fit: cover; }
+.idlx-mono-pair { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 3vw, 40px); padding: 0 clamp(28px, 6vw, 100px); align-items: start; }
+.idlx-mono-pair .idlx-mono-fig { align-self: start; }
+.idlx-mono-pair img { width: 100%; height: auto; display: block; }
 @media (max-width: 800px) { .idlx-mono-pair { grid-template-columns: 1fr; } }
 .idlx-mono-cap { font-family: var(--sans); font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--idlx-mute); margin-top: 12px; padding: 0 clamp(28px, 6vw, 100px); }
 
