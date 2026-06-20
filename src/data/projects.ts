@@ -135,9 +135,6 @@ import de5 from "@/assets/divya-enclave-5.jpeg.asset.json";
 import de6 from "@/assets/divya-enclave-6.jpeg.asset.json";
 import de7 from "@/assets/divya-enclave-7.jpeg.asset.json";
 import de8 from "@/assets/divya-enclave-8.jpeg.asset.json";
-import de9 from "@/assets/divya-enclave-9.jpeg.asset.json";
-import de10 from "@/assets/divya-enclave-10.jpeg.asset.json";
-import de11 from "@/assets/divya-enclave-11.png.asset.json";
 import de12 from "@/assets/divya-enclave-12.png.asset.json";
 
 // Adarsh Vidya Mandir — Rajasthan (Architecture · Hospitality)
