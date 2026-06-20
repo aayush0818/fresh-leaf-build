@@ -1,18 +1,15 @@
+import tata from "@/assets/clients/tata.png";
+import drdo from "@/assets/clients/drdo.png";
+import adityaBirla from "@/assets/clients/aditya-birla.png";
+import monster from "@/assets/clients/monster.png";
+import meril from "@/assets/clients/meril.png";
+
 const clients = [
-  "Tata",
-  "Aditya Birla Group",
-  "DRDO",
-  "Meril",
-  "Monster",
-  "Quest",
-  "Maple",
-  "Jean-Claude Biguine",
-  "Palak Jewellers",
-  "Solitaa",
-  "Ratanshi Kheraj",
-  "Body Goals",
-  "Gold Cornet",
-  "MVVPL",
+  { name: "Tata", src: tata },
+  { name: "Aditya Birla Group", src: adityaBirla },
+  { name: "DRDO", src: drdo },
+  { name: "Meril", src: meril },
+  { name: "Monster", src: monster },
 ];
 
 export function Clients() {
@@ -22,8 +19,8 @@ export function Clients() {
       <div className="clients-marquee">
         {[0, 1].map((dup) => (
           <div className="clients-marquee-track" key={dup} aria-hidden={dup === 1}>
-            {clients.map((name) => (
-              <span key={`${dup}-${name}`}>{name}</span>
+            {clients.map((c) => (
+              <img key={`${dup}-${c.name}`} src={c.src} alt={c.name} loading="lazy" />
             ))}
           </div>
         ))}
