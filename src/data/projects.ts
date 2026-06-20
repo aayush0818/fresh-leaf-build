@@ -1111,9 +1111,10 @@ export const projects: Project[] = [
     area: "",
     scope: "",
     category: "Interiors",
-    cover: sw3.url,
-    gallery: sageWhisperResidenceGallery,
-    description: "A soft, airy home with sage cabinetry, pale stone, delicate detailing and a quiet pastel mood.",
+    cover: hos1.url,
+    gallery: houseOfStoneGallery,
+    description: "Designed as a contemporary family home with a strong sense of individuality, the residence combines dramatic natural stone, warm metallic accents, and tailored architectural detailing. The result is a collection of spaces that feel sophisticated, immersive, and timeless in character.",
+    imageFit: "contain",
   },
   {
     slug: "onyx-and-ivory-marbled-maison",
