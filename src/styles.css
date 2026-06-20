@@ -1145,7 +1145,6 @@ body {
 .clients-marquee {
   display: flex;
   width: max-content;
-  gap: clamp(48px, 7vw, 96px);
   animation: clients-scroll 48s linear infinite;
   will-change: transform;
 }
@@ -1153,8 +1152,8 @@ body {
 .clients-marquee-track {
   display: flex;
   align-items: center;
-  gap: clamp(48px, 7vw, 96px);
-  padding-right: clamp(48px, 7vw, 96px);
+  gap: clamp(56px, 7vw, 110px);
+  padding-right: clamp(56px, 7vw, 110px);
   flex-shrink: 0;
 }
 .clients-marquee span {
@@ -1169,13 +1168,6 @@ body {
   transition: opacity 0.4s ease, color 0.4s ease;
 }
 .clients-marquee span:hover { opacity: 1; color: var(--fg); }
-.clients-marquee span + span::before {
-  content: "·";
-  display: inline-block;
-  margin-right: clamp(48px, 7vw, 96px);
-  color: var(--stone);
-  opacity: 0.7;
-}
 @keyframes clients-scroll {
   from { transform: translate3d(0, 0, 0); }
   to   { transform: translate3d(-50%, 0, 0); }
