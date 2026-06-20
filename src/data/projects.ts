@@ -297,6 +297,19 @@ import er8 from "@/assets/emerald-125.jpeg.asset.json";
 import er9 from "@/assets/emerald-008-2.jpeg.asset.json";
 import er10 from "@/assets/emerald-013.jpeg.asset.json";
 
+// House of Arches — Residential Interior
+import hoa1 from "@/assets/house-of-arches-107.jpeg.asset.json";
+import hoa2 from "@/assets/house-of-arches-90-2.jpeg.asset.json";
+import hoa3 from "@/assets/house-of-arches-96.jpeg.asset.json";
+import hoa4 from "@/assets/house-of-arches-98.jpeg.asset.json";
+import hoa5 from "@/assets/house-of-arches-93.jpeg.asset.json";
+import hoa6 from "@/assets/house-of-arches-102.jpeg.asset.json";
+import hoa7 from "@/assets/house-of-arches-21.jpeg.asset.json";
+import hoa8 from "@/assets/house-of-arches-24.jpeg.asset.json";
+import hoa9 from "@/assets/house-of-arches-61.jpeg.asset.json";
+import hoa10 from "@/assets/house-of-arches-66.jpeg.asset.json";
+const houseOfArchesGallery = [hoa1.url, hoa2.url, hoa3.url, hoa4.url, hoa5.url, hoa6.url, hoa7.url, hoa8.url, hoa9.url, hoa10.url];
+
 // Blush & Bronze Residence — Residential Interior
 import bb1 from "@/assets/blush-bronze-residence-1.jpeg.asset.json";
 import bb2 from "@/assets/blush-bronze-residence-2.jpeg.asset.json";
@@ -562,6 +575,7 @@ export type Project = {
   cover: string;
   gallery: string[];
   facilities?: Facility[];
+  imageFit?: "cover" | "contain";
 };
 
 
@@ -1004,6 +1018,20 @@ export const projects: Project[] = [
     cover: ridgeHouse1.url,
     gallery: [ridgeHouse1.url, ridgeHouse2.url, ridgeHouse3.url],
     description: "Positioned within a lush natural setting, the residence is designed around openness, views, and outdoor living. Clean architectural forms sit comfortably within the landscape, creating a calm and understated retreat.",
+  },
+  {
+    slug: "house-of-arches",
+    name: "House of Arches",
+    sector: "Residential",
+    location: "",
+    year: "",
+    area: "",
+    scope: "",
+    category: "Interiors",
+    cover: hoa1.url,
+    gallery: houseOfArchesGallery,
+    description: "Soft curves, muted tones, and understated detailing define a home that feels calm, inviting, and timeless. The interiors embrace contemporary minimalism while introducing warmth through texture, natural materials, and gentle architectural gestures.",
+    imageFit: "contain",
   },
   {
     slug: "emerald-reverie-classical-penthouse",

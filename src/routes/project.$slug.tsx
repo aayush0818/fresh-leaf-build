@@ -36,7 +36,7 @@ function ProjectPage() {
     <>
       <CustomCursor />
       <Header />
-      <article className="idlx-page">
+      <article className={`idlx-page${project.imageFit === "contain" ? " idlx-fit-contain" : ""}`}>
         <CinematicHero
           image={project.cover}
           alt={project.name}
