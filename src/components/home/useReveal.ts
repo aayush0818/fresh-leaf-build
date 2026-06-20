@@ -1,26 +1,30 @@
 import { useEffect } from "react";
 
 /**
- * Cinematic image system.
+ * Image reveal + parallax system.
  *
- * For every `.img-reveal-wrap > .img-parallax` on the page we drive a single
- * transform per frame that combines three behaviours:
- *
- *   1. REVEAL          — image starts translated down (+60px) and scaled
- *                        UP (1.12). As it enters the viewport it slides
- *                        upward and scales DOWN to (0, 1.0). This is the
- *                        "camera stabilising" feel.
- *   2. PARALLAX        — once revealed, the inner element continues to drift
- *                        opposite to scroll at ~30% speed. Mimics camera
- *                        movement across a static scene.
- *   3. WORKS REVERSE   — `.works-drop-wrap` overrides the parallax direction
- *                        so images drift DOWNWARD as the page scrolls down.
- *
- * Text reveals use a one-shot IntersectionObserver (unchanged).
+ * Optimised:
+ *   - One IntersectionObserver tracks which wraps are on-screen; only those
+ *     get a per-frame transform write.
+ *   - RAF runs only while the user is scrolling (or resizing); it self-stops
+ *     a few frames after scroll ends so the main thread is idle when idle.
+ *   - On touch / small viewports the heavy parallax is disabled and elements
+ *     are simply faded in via an IntersectionObserver (cheap, one-shot).
  */
+function isTouchDevice() {
+  if (typeof window === "undefined") return true;
+  if (window.matchMedia("(pointer: coarse)").matches) return true;
+  if (window.matchMedia("(hover: none)").matches) return true;
+  if (window.innerWidth <= 768) return true;
+  return false;
+}
+
 export function useReveal() {
   useEffect(() => {
     if (typeof window === "undefined") return;
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const touch = isTouchDevice();
 
     // ---- Text / element reveal (one-shot) ----
     let textIo: IntersectionObserver | null = null;
@@ -45,76 +49,129 @@ export function useReveal() {
         .forEach((el) => el.classList.add("is-visible"));
     }
 
-    // ---- Image system ----
-    type Entry = { wrap: HTMLElement; inner: HTMLElement; isWorks: boolean };
-    const collect = (): Entry[] => {
-      const wraps = Array.from(
-        document.querySelectorAll<HTMLElement>(".img-reveal-wrap")
-      );
-      const out: Entry[] = [];
-      for (const wrap of wraps) {
-        const inner = wrap.querySelector<HTMLElement>(".img-parallax");
-        if (inner) {
-          out.push({
-            wrap,
-            inner,
-            isWorks: wrap.classList.contains("works-drop-wrap"),
+    // On touch / reduced motion: fall back to a cheap one-shot fade-in for
+    // .img-parallax — no RAF, no scroll listener.
+    if (touch || reduceMotion) {
+      const imgIo = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              (entry.target as HTMLElement).style.opacity = "1";
+              imgIo.unobserve(entry.target);
+            }
           });
-        }
-      }
-      return out;
-    };
+        },
+        { threshold: 0.05 }
+      );
+      const inners = document.querySelectorAll<HTMLElement>(
+        ".img-reveal-wrap .img-parallax"
+      );
+      inners.forEach((el) => {
+        el.style.opacity = "0";
+        el.style.transition = "opacity 600ms cubic-bezier(0.22,1,0.36,1)";
+        imgIo.observe(el);
+      });
+      return () => {
+        textIo?.disconnect();
+        imgIo.disconnect();
+      };
+    }
 
-    let entries = collect();
-    let lastQuery = performance.now();
-    let rafId = 0;
+    // ---- Desktop: parallax + reveal only for on-screen entries ----
+    type Entry = { wrap: HTMLElement; inner: HTMLElement; isWorks: boolean };
+    const visible = new Set<Entry>();
+    const all: Entry[] = [];
+
+    const wraps = Array.from(
+      document.querySelectorAll<HTMLElement>(".img-reveal-wrap")
+    );
+    for (const wrap of wraps) {
+      const inner = wrap.querySelector<HTMLElement>(".img-parallax");
+      if (inner) {
+        all.push({ wrap, inner, isWorks: wrap.classList.contains("works-drop-wrap") });
+      }
+    }
+
+    const visIo = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          const entry = all.find((x) => x.wrap === e.target);
+          if (!entry) continue;
+          if (e.isIntersecting) visible.add(entry);
+          else visible.delete(entry);
+        }
+        // Kick the loop in case scroll handler isn't firing right now
+        if (visible.size > 0) requestLoop();
+      },
+      { rootMargin: "200px 0px 200px 0px" }
+    );
+    all.forEach((e) => visIo.observe(e.wrap));
 
     const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
 
+    let rafId = 0;
+    let running = false;
+    let idleFrames = 0;
+
     const tick = () => {
-      const now = performance.now();
-      if (now - lastQuery > 1200) {
-        entries = collect();
-        lastQuery = now;
-      }
-
       const vh = window.innerHeight || 1;
-
-      for (const { wrap, inner, isWorks } of entries) {
+      for (const { wrap, inner, isWorks } of visible) {
         const rect = wrap.getBoundingClientRect();
-        if (rect.bottom < -400 || rect.top > vh + 400) continue;
-
-        // Reveal progress: 0 when the top edge is at the viewport bottom,
-        // 1 by the time the top edge reaches 25% from the viewport top.
         const revealRaw = (vh - rect.top) / (vh * 0.75);
         const reveal = revealRaw < 0 ? 0 : revealRaw > 1 ? 1 : revealRaw;
         const r = easeOutCubic(reveal);
-
-        // Reveal contribution: translateY +40px → 0, scale 1.06 → 1.0
         const revealY = (1 - r) * 40;
         const revealScale = 1 + (1 - r) * 0.06;
-        const opacity = r;
 
-        // Parallax contribution: progress from -1 (entering) to +1 (leaving)
-        // through the viewport. Drives a subtle 24px range.
         const center = rect.top + rect.height / 2;
         const through = (center - vh / 2) / (vh / 2 + rect.height / 2);
         const t = through < -1 ? -1 : through > 1 ? 1 : through;
-        // Default: image moves UPWARD opposite to scroll (camera-like).
-        // Works override: image moves DOWNWARD as you scroll down.
         const parallaxY = isWorks ? t * 26 : t * -26;
 
         const y = revealY + parallaxY;
         inner.style.transform = `translate3d(0, ${y.toFixed(2)}px, 0) scale(${revealScale.toFixed(4)})`;
-        inner.style.opacity = opacity.toFixed(3);
+        inner.style.opacity = r.toFixed(3);
       }
 
+      // Self-stop after a few idle frames (no scroll input)
+      if (idleFrames > 6) {
+        running = false;
+        return;
+      }
+      idleFrames += 1;
       rafId = requestAnimationFrame(tick);
     };
 
-    rafId = requestAnimationFrame(tick);
+    const requestLoop = () => {
+      idleFrames = 0;
+      if (!running) {
+        running = true;
+        rafId = requestAnimationFrame(tick);
+      }
+    };
+
+    const onScroll = () => requestLoop();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+
+    const onVis = () => {
+      if (document.hidden) {
+        running = false;
+        cancelAnimationFrame(rafId);
+      }
+    };
+    document.addEventListener("visibilitychange", onVis);
+
+    // Initial paint
+    requestLoop();
+
     return () => {
+      running = false;
       cancelAnimationFrame(rafId);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      document.removeEventListener("visibilitychange", onVis);
+      visIo.disconnect();
       textIo?.disconnect();
     };
   }, []);
