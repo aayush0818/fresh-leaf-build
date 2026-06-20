@@ -211,9 +211,9 @@ body {
 .idl-header.is-menu::before { opacity: 0; }
 
 .idl-header.is-scrolled {
-  background: rgba(245, 243, 239, 0.92);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(245, 243, 239, 0.96);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: #2a2520;
   height: 78px;
   border-bottom-color: rgba(42, 37, 32, 0.08);
@@ -231,9 +231,9 @@ body {
 /* Non-home routes: cream translucent header always, dark ink for legibility */
 .idl-header.is-light-bg {
   color: #2a2520;
-  background: rgba(245, 243, 239, 0.9);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(245, 243, 239, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-bottom-color: rgba(42, 37, 32, 0.08);
   box-shadow: 0 1px 0 rgba(42, 37, 32, 0.04);
 }
