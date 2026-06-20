@@ -493,9 +493,9 @@ const noirResidenceGallery = [
   nr21.url,
 ];
 const merilGallery = [mc1.url, mc2.url, mc3.url, mc4.url, mc5.url, mc6.url, mc7.url, mc8.url, mc9.url, mc10.url];
-const merilAcademyGallery = [ma1.url, ma2.url, ma3.url, ma4.url, ma5.url, ma6.url, ma7.url, ma8.url, ma9.url, ma10.url, ma11.url, ma12.url, ma13.url];
+const merilAcademyGallery = [ma1.url, ma2.url, ma3.url, ma4.url, ma5.url, ma6.url, ma7.url, ma8.url, ma9.url, ma10.url, ma11.url, ma12.url, ma13.url, ma14.url, ma15.url];
 const dcpOfficeBelapurGallery = [dcp1.url, dcp2.url, dcp3.url, dcp4.url];
-const apjAuditoriumGallery = [apj1.url, apj2.url, apj3.url, apj4.url, apj5.url, apj6.url, apj7.url, apj8.url];
+const apjAuditoriumGallery = [apj1.url, apj2.url, apj3.url, apj4.url, apj5.url, apj6.url, apj7.url, apj8.url, apj9.url];
 const merilBld56Gallery = [mb56_1.url, mb56_2.url];
 const divyaEnclaveGallery = [de1.url, de2.url, de3.url, de4.url, de5.url, de6.url, de7.url, de8.url, de9.url, de10.url, de11.url];
 const adarshVidyaMandirGallery = [avm1.url, avm2.url];
@@ -520,7 +520,7 @@ const cloudlinePenthouseGallery = [cl2406.url, cl2028.url, cl2460.url, cl2295.ur
 const bharosoSavarkundlaGallery = [bharoso1.url, bharoso2.url, bharoso3.url];
 const metroHospitalDelhiGallery = [metroDel1.url, metroDel2.url];
 const tataRallisBangaloreGallery = [tataRallis2.url, tataRallis3.url, tataRallis1.url];
-const iigInstituteColabaGallery = [iigColaba1.url];
+const iigInstituteColabaGallery = [iigColaba1.url, iigColaba2.url];
 const gandhiPeaceCentrePuneGallery = [gandhiPeace1.url];
 const viaAuditoriumVapiGallery = [viaVapi1.url, viaVapi2.url, viaVapi3.url, viaVapi4.url];
 const questAjaySethGallery = [quest67.url, quest77.url, quest72.url, quest65.url, quest94.url, quest97.url, quest99.url, quest47.url, quest45.url, quest57.url, quest96.url, quest51.url, quest50.url, quest18.url, quest42.url, quest38.url, quest82.url, quest23.url, quest83.url, quest80.url];
