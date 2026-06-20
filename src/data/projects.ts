@@ -48,6 +48,8 @@ import mc7 from "@/assets/meril-7.jpg.asset.json";
 import mc8 from "@/assets/meril-8.jpg.asset.json";
 import mc9 from "@/assets/meril-9.jpg.asset.json";
 import mc10 from "@/assets/meril-10.jpg.asset.json";
+import mc11 from "@/assets/meril-11.png.asset.json";
+import mc12 from "@/assets/meril-12.png.asset.json";
 
 // Meril Academy — Vapi (Architecture · Institutional)
 import ma1 from "@/assets/meril-academy-vapi-1.jpg.asset.json";
@@ -111,6 +113,7 @@ import mvvplHotel4 from "@/assets/mvvpl-hotel-4.png.asset.json";
 import mvvplHotel5 from "@/assets/mvvpl-hotel-5.png.asset.json";
 import mvvplHotel6 from "@/assets/mvvpl-hotel-6.png.asset.json";
 import mvvplHotel7 from "@/assets/mvvpl-hotel-7.png.asset.json";
+import mvvplHotel8 from "@/assets/mvvpl-hotel-8.png.asset.json";
 
 // MVVPL Clubhouse (Architecture · Hospitality)
 import mvvplClub1 from "@/assets/mvvpl-clubhouse-1.jpg.asset.json";
@@ -131,6 +134,7 @@ import de8 from "@/assets/divya-enclave-8.jpeg.asset.json";
 import de9 from "@/assets/divya-enclave-9.jpeg.asset.json";
 import de10 from "@/assets/divya-enclave-10.jpeg.asset.json";
 import de11 from "@/assets/divya-enclave-11.png.asset.json";
+import de12 from "@/assets/divya-enclave-12.png.asset.json";
 
 // Adarsh Vidya Mandir — Rajasthan (Architecture · Hospitality)
 import avm1 from "@/assets/adarsh-vidya-mandir-rajasthan-1.jpg.asset.json";
@@ -176,6 +180,7 @@ import er_n60 from "@/assets/energize-resort-nashik-extra-60.jpg.asset.json";
 import er_n78 from "@/assets/energize-resort-nashik-extra-78.jpg.asset.json";
 import er_n81 from "@/assets/energize-resort-nashik-extra-81.jpg.asset.json";
 import er_n82 from "@/assets/energize-resort-nashik-extra-82.png.asset.json";
+import er_n83 from "@/assets/energize-resort-nashik-extra-83.png.asset.json";
 import noirResidenceCoverUpload from "@/assets/noir-residence-cover-upload.png.asset.json";
 import goldCornetCoverUpload from "@/assets/gold-cornet-cover-upload.png.asset.json";
 import energizeResortCoverUpload from "@/assets/energize-resort-cover-upload.png.asset.json";
@@ -389,6 +394,7 @@ import cl2295 from "@/assets/cloudline-PAB2295-HDR.jpg.asset.json";
 import bharoso1 from "@/assets/bharoso-savarkundla-1.jpg.asset.json";
 import bharoso2 from "@/assets/bharoso-savarkundla-2.jpg.asset.json";
 import bharoso3 from "@/assets/shree-lallubhai-seth-arogya-mandir-3.jpg.asset.json";
+import bharoso4 from "@/assets/shree-lallubhai-seth-arogya-mandir-4.png.asset.json";
 
 // Metro Hospital — Delhi (Architecture / Commercial)
 import metroDel1 from "@/assets/metro-hospital-delhi-1.jpg.asset.json";
@@ -492,14 +498,14 @@ const noirResidenceGallery = [
   nr9.url,
   nr21.url,
 ];
-const merilGallery = [mc1.url, mc2.url, mc3.url, mc4.url, mc5.url, mc6.url, mc7.url, mc8.url, mc9.url, mc10.url];
+const merilGallery = [mc1.url, mc2.url, mc3.url, mc4.url, mc5.url, mc6.url, mc7.url, mc8.url, mc9.url, mc10.url, mc11.url, mc12.url];
 const merilAcademyGallery = [ma1.url, ma2.url, ma3.url, ma4.url, ma5.url, ma6.url, ma7.url, ma8.url, ma9.url, ma10.url, ma11.url, ma12.url, ma13.url, ma14.url, ma15.url];
 const dcpOfficeBelapurGallery = [dcp1.url, dcp2.url, dcp3.url, dcp4.url];
 const apjAuditoriumGallery = [apj1.url, apj2.url, apj3.url, apj4.url, apj5.url, apj6.url, apj7.url, apj8.url, apj9.url];
 const merilBld56Gallery = [mb56_1.url, mb56_2.url];
-const divyaEnclaveGallery = [de1.url, de2.url, de3.url, de4.url, de5.url, de6.url, de7.url, de8.url, de9.url, de10.url, de11.url];
+const divyaEnclaveGallery = [de1.url, de2.url, de3.url, de4.url, de5.url, de6.url, de7.url, de8.url, de9.url, de10.url, de11.url, de12.url];
 const adarshVidyaMandirGallery = [avm1.url, avm2.url];
-const energizeResortNashikGallery = [er_n2.url, er_n3.url, er_n4.url, er_n5.url, er_n6.url, er_n7.url, er_n8.url, er_n9.url, er_n10.url, er_n13.url, er_n18.url, er_n5b.url, er_n21.url, er_n22.url, er_n23.url, er_n26.url, er_n29.url, er_n34.url, er_n35.url, er_n45.url, er_n48.url, er_n49.url, er_n51.url, er_n60.url, er_n78.url, er_n81.url, er_n82.url];
+const energizeResortNashikGallery = [er_n2.url, er_n3.url, er_n4.url, er_n5.url, er_n6.url, er_n7.url, er_n8.url, er_n9.url, er_n10.url, er_n13.url, er_n18.url, er_n5b.url, er_n21.url, er_n22.url, er_n23.url, er_n26.url, er_n29.url, er_n34.url, er_n35.url, er_n45.url, er_n48.url, er_n49.url, er_n51.url, er_n60.url, er_n78.url, er_n81.url, er_n82.url, er_n83.url];
 const goldCornetBoutiqueGallery = [gcb1.url, gcb2.url, gcb3.url, gcb4.url, gcb5.url, gcb6.url, gcb7.url, gcb8.url, gcb9.url, gcb10.url];
 const adityaBirlaAsthavinayakGallery = [abAstha1.url, abAstha2.url, abAstha3.url, abAstha4.url, abAstha5.url];
 const adityaBirlaCancerCenterGallery = [abcc1.url, abcc2.url, abcc3.url, abcc4.url, abcc5.url, abcc6.url, abcc7.url, abcc8.url, abcc9.url, abcc10.url, abcc11.url, abcc12.url];
@@ -517,7 +523,7 @@ const emeraldReverieGallery = [er1.url, er2.url, er3.url, er4.url, er5.url, er6.
 const blushBronzeResidenceGallery = [bb3.url, bb1.url, bb2.url, bb4.url, bb5.url, bb6.url, bb7.url];
 const sageWhisperResidenceGallery = [sw3.url, sw1.url, sw2.url, swe91.url, swe75.url, swe56.url, swe27.url, swe13.url, swe90.url, swe124.url, swe45.url, swe2.url, swe130.url];
 const cloudlinePenthouseGallery = [cl2406.url, cl2028.url, cl2460.url, cl2295.url, cl2454.url, cl2472.url, cl2316.url, cl2298.url, cl2304.url, cl2166.url, cl2203.url, cl2478.url, cl2493.url];
-const bharosoSavarkundlaGallery = [bharoso1.url, bharoso2.url, bharoso3.url];
+const bharosoSavarkundlaGallery = [bharoso1.url, bharoso2.url, bharoso3.url, bharoso4.url];
 const metroHospitalDelhiGallery = [metroDel1.url, metroDel2.url];
 const tataRallisBangaloreGallery = [tataRallis2.url, tataRallis3.url, tataRallis1.url];
 const iigInstituteColabaGallery = [iigColaba1.url, iigColaba2.url];
