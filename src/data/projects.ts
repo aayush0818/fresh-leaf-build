@@ -687,7 +687,7 @@ export const projects: Project[] = [
     area: "",
     scope: "",
     category: "Architecture",
-    cover: de3.url,
+    cover: de12.url,
     gallery: divyaEnclaveGallery,
     description: "A community-centric clubhouse that brings leisure, wellness, and social interaction together. Designed as an extension of everyday living, it offers spaces that encourage gathering and recreation.",
   },
