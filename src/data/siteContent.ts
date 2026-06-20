@@ -31,7 +31,7 @@ import apj1 from "@/assets/apj-auditorium-1.jpg.asset.json";
 import apj2 from "@/assets/apj-auditorium-3.jpg.asset.json";
 
 import energize1 from "@/assets/energize-resort-nashik-2.jpg.asset.json";
-import energize2 from "@/assets/energize-resort-nashik-4.jpg.asset.json";
+import energize2 from "@/assets/energize-resort-nashik-5.jpg.asset.json";
 import energize3 from "@/assets/energize-resort-nashik-6.jpg.asset.json";
 import divya1 from "@/assets/divya-enclave-1.jpg.asset.json";
 import divya2 from "@/assets/divya-enclave-3.jpeg.asset.json";
