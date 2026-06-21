@@ -229,42 +229,13 @@ export function Header() {
                           to={item.to!}
                           className="idl-mega-nav-link"
                           data-hover
-                          onClick={(e) => {
-                            if (isMobile && !isActive) {
-                              e.preventDefault();
-                              setActiveIdx(i);
-                              return;
-                            }
-                            closeAll();
-                          }}
+                          onClick={closeAll}
                           onMouseEnter={() => setActiveIdx(i)}
                         >
                           <span className="idl-mega-nav-index">{String(i + 1).padStart(2, "0")}</span>
                           <span className="idl-mega-nav-label">{item.label}</span>
                         </Link>
                       )}
-                      <AnimatePresence initial={false}>
-                        {isMobile && isActive ? (
-                          <motion.div
-                            key="inline"
-                            className="idl-mega-inline"
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.4, ease: EASE }}
-                          >
-                            <div className="idl-mega-inline-image">
-                              <img src={item.image} alt="" loading="lazy" />
-                            </div>
-                            <p className="idl-mega-inline-blurb">{item.blurb}</p>
-                            {!hasKids ? (
-                              <Link to={item.to!} className="idl-mega-sub-link" data-hover onClick={closeAll}>
-                                Open {item.label} →
-                              </Link>
-                            ) : null}
-                          </motion.div>
-                        ) : null}
-                      </AnimatePresence>
                       <AnimatePresence initial={false}>
                         {isActive && hasKids ? (
                           <motion.ul className="idl-mega-sub" initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.4, ease: EASE }}>
