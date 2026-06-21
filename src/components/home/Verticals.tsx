@@ -138,11 +138,12 @@ export function Verticals() {
                       const isTouch =
                         typeof window !== "undefined" &&
                         (window.matchMedia?.("(hover: none), (max-width: 768px)").matches ?? false);
-                      console.log("[vx] click", { i, isActive, isTouch });
-                      if (isTouch && !isActive) {
+                      if (isTouch && tapped !== i) {
+                        // First tap on this row: reveal only.
                         e.preventDefault();
                         e.stopPropagation();
                         setActive(i);
+                        setTapped(i);
                       }
                     }}
                   >
