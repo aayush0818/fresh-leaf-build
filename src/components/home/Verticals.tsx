@@ -85,7 +85,6 @@ const groups: Group[] = [
 const FADE = { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const };
 
 export function Verticals() {
-  const isMobile = useIsMobile();
   const [groupIdx, setGroupIdx] = useState(0);
   const [active, setActive] = useState(0);
   // On touch devices, track which row the user has explicitly tapped.
