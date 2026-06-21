@@ -36,8 +36,11 @@ html, body {
   font-family: var(--sans);
   /* `overflow-x: clip` (not hidden) — `hidden` on html/body breaks
      `position: sticky` for descendants. clip suppresses the same overflow
-     without killing the containing-block ancestor chain. */
-  overflow-x: clip;
+     without killing the containing-block ancestor chain.
+     !important is required because Lenis sets overflow:hidden on html/body
+     at runtime, which would otherwise break our sticky philosophy section. */
+  overflow-x: clip !important;
+  overflow-y: visible !important;
 }
 
 
