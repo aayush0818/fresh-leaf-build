@@ -3,9 +3,8 @@ import logo from "@/assets/idl-logo.png";
 
 const navLinks = [
   { label: "Projects", to: "/projects" as const },
-  { label: "Studio", to: "/studio/about" as const },
-  { label: "Awards", to: "/awards" as const },
-  { label: "Media Recognition", to: "/media-recognition" as const },
+  { label: "About IDL", to: "/studio/about" as const },
+  { label: "Awards & Recognition", to: "/awards" as const },
   { label: "Contact", to: "/contact" as const },
 ];
 
