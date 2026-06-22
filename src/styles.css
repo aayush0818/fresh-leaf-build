@@ -3145,7 +3145,7 @@ a:hover .img-reveal-wrap .img-parallax {
   .idlx-page > header,
   .idlx-media-head { padding: 0 0 36px; max-width: none; }
   .idlx-media-head { margin-bottom: 44px; }
-  .idlx-eyebrow { font-size: 10px; letter-spacing: 0.24em; }
+  .idlx-eyebrow { font-size: 11px; letter-spacing: 0.22em; }
   .idlx-h2 { font-size: clamp(28px, 8.5vw, 40px) !important; line-height: 1.06; letter-spacing: -0.01em; }
   .idlx-media-title { font-size: clamp(30px, 9.5vw, 44px); line-height: 1.04; letter-spacing: -0.01em; }
   .idlx-media-lede,
