@@ -78,6 +78,7 @@ const groups: Group[] = [
         tagline: "Thoughtfully composed interiors that bring warmth, character, and everyday functionality together.",
         feature: { name: "Atelier Residence", location: "Mumbai" },
         img: intResidential,
+        focal: "center 45%",
       },
       {
         name: "Commercial",
