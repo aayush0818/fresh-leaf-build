@@ -7,7 +7,7 @@ import { Marquee } from "@/components/motion/Marquee";
 
 import heroImg from "@/assets/idl/PAB9031-HDR.jpg.asset.json";
 import mvvImg from "@/assets/idl/PAB9056-HDR.jpg.asset.json";
-import rangeImg from "@/assets/idl/PAB9126-HDR.jpg.asset.json";
+
 import cultureLeftImg from "@/assets/idl/PAB9071-HDR.jpg.asset.json";
 import cultureRightImg from "@/assets/idl/PAB8838-HDR.jpg.asset.json";
 import bottomSplitOne from "@/assets/idl/PAB9081-HDR.jpg.asset.json";
