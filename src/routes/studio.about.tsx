@@ -30,9 +30,9 @@ import {
 export const Route = createFileRoute("/studio/about")({
   head: () => ({
     meta: [
-      { title: "About — Studio · Interarch Design Labs" },
+      { title: "About - Studio · Interarch Design Labs" },
       { name: "description", content: aboutCopy.intro.slice(0, 160) },
-      { property: "og:title", content: "About — Studio · IDL" },
+      { property: "og:title", content: "About - Studio · IDL" },
       { property: "og:description", content: aboutCopy.intro.slice(0, 160) },
       { property: "og:image", content: studioHero },
     ],
@@ -48,7 +48,7 @@ function AboutPage() {
         alt="Interarch Design Labs studio"
         eyebrow={aboutCopy.eyebrow}
         title={aboutCopy.headline}
-        meta="Mumbai — Est. 1989"
+        meta="Mumbai - Est. 1989"
       />
 
       {/* Manifesto */}

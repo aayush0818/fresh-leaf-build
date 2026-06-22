@@ -117,7 +117,7 @@ export function Header() {
   return (
     <>
       <header className={headerClass}>
-        <Link to="/" className="idl-logo" aria-label="Interarch Design Labs — Home" onClick={closeAll}>
+        <Link to="/" className="idl-logo" aria-label="Interarch Design Labs - Home" onClick={closeAll}>
           <img src={logo} alt="Interarch Design Labs" className="idl-logo-mark" />
         </Link>
 

@@ -9,9 +9,9 @@ import { journalPosts, pageImages } from "@/data/siteContent";
 export const Route = createFileRoute("/practice/journal")({
   head: () => ({
     meta: [
-      { title: "Journal — Practice · IDL" },
-      { name: "description", content: "Essays and notes from the studio — on architecture, interiors, light and material." },
-      { property: "og:title", content: "Journal — Practice · IDL" },
+      { title: "Journal - Practice · IDL" },
+      { name: "description", content: "Essays and notes from the studio - on architecture, interiors, light and material." },
+      { property: "og:title", content: "Journal - Practice · IDL" },
       { property: "og:description", content: "Studio notes." },
     ],
   }),
@@ -36,7 +36,7 @@ function JournalPage() {
           <MaskText as="h1" className="idlx-h2" delay={0.1}>{`In conversation.`}</MaskText>
           <Reveal delay={0.3}>
             <p className="idlx-lead" style={{ maxWidth: 720, margin: "32px auto 0" }}>
-              Blogs, achievements and studio observations — a slow, irregular journal.
+              Blogs, achievements and studio observations - a slow, irregular journal.
             </p>
           </Reveal>
         </section>

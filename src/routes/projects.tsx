@@ -16,9 +16,9 @@ const work3 = interiorSplitAsset.url;
 export const Route = createFileRoute("/projects")({
   head: () => ({
     meta: [
-      { title: "Projects — Interarch Design Labs" },
-      { name: "description", content: "An archive of architecture and interiors — split between two disciplines, one register." },
-      { property: "og:title", content: "Projects — Interarch Design Labs" },
+      { title: "Projects - Interarch Design Labs" },
+      { name: "description", content: "An archive of architecture and interiors - split between two disciplines, one register." },
+      { property: "og:title", content: "Projects - Interarch Design Labs" },
       { property: "og:description", content: "Architecture and interiors by Interarch Design Labs." },
       { property: "og:image", content: work1 },
     ],

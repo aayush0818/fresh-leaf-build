@@ -80,9 +80,9 @@ export const Route = createFileRoute("/projects/$category")({
   },
   head: ({ params }) => ({
     meta: [
-      { title: `${cap(params.category)} — Projects · IDL` },
+      { title: `${cap(params.category)} - Projects · IDL` },
       { name: "description", content: `Selected ${params.category.toLowerCase()} projects by Interarch Design Labs.` },
-      { property: "og:title", content: `${cap(params.category)} — Projects · IDL` },
+      { property: "og:title", content: `${cap(params.category)} - Projects · IDL` },
       { property: "og:description", content: `Selected ${params.category.toLowerCase()} work.` },
     ],
   }),
@@ -123,7 +123,7 @@ function CategoryPage() {
         <CinematicHero
           image={hero}
           alt={cap(cat)}
-          eyebrow={`— Projects · ${cap(cat)}`}
+          eyebrow={`Projects · ${cap(cat)}`}
           title={cap(cat) + "."}
           meta={`${filteredList.length} works`}
           height="tall"

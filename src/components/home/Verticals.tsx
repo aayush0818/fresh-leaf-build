@@ -108,9 +108,9 @@ export function Verticals() {
   return (
     <section className="vx-section">
       <div className="vx-grid">
-        {/* LEFT — discipline tabs + sector list */}
+        {/* LEFT - discipline tabs + sector list */}
         <div className="vx-list">
-          <span className="vx-eyebrow">( 02 ) — Disciplines</span>
+          <span className="vx-eyebrow">( 02 ) - Disciplines</span>
 
           <div className="vx-disc-row">
             {groups.map((g, i) => (
@@ -186,7 +186,7 @@ export function Verticals() {
           </Link>
         </div>
 
-        {/* RIGHT — contained image */}
+        {/* RIGHT - contained image */}
         <div className="vx-media">
           <div className="vx-media-frame">
             <AnimatePresence mode="wait">
