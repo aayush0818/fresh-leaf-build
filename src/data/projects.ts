@@ -658,6 +658,7 @@ export type Project = {
   gallery: string[];
   facilities?: Facility[];
   imageFit?: "cover" | "contain";
+  showcase?: string;
 };
 
 
@@ -878,7 +879,8 @@ export const projects: Project[] = [
     scope: "Architecture",
     category: "Architecture",
     cover: mp1_side.url,
-    gallery: [mp1_front.url, mp1_4.url, mp1_5.url, mp1_6.url, mp1_reception.url],
+    gallery: [mp1_front.url, mp1_5.url, mp1_6.url, mp1_reception.url],
+    showcase: mp1_4.url,
     description: "Designed as a modern life sciences campus, the architecture combines monumentality with openness to create an environment of trust and progress.",
   },
   {
