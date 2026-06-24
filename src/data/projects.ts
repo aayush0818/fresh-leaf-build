@@ -784,7 +784,7 @@ export const projects: Project[] = [
     area: "",
     scope: "",
     category: "Architecture",
-    cover: viaVapi1.url,
+    cover: viaAuditoriumHero.url,
     gallery: viaAuditoriumVapiGallery,
     description: "A cultural destination designed to bring communities together through shared experiences. The architecture balances functionality, acoustics, and presence to create a memorable venue for performance and engagement.",
   },
