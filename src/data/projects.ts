@@ -908,8 +908,8 @@ export const projects: Project[] = [
     area: "",
     scope: "Architecture",
     category: "Architecture",
-    cover: mvvplHotel1.url,
-    gallery: [mvvplHotel1.url, mvvplHotel2.url, mvvplHotel3.url],
+    cover: mvvplHotelAerial.url,
+    gallery: [mvvplHotelAerial.url, mvvplHotelFront.url, mvvplHotelCenter.url, mvvplHotelPorteCochere.url, mvvplHotelThreeQuarter.url, mvvplHotel1.url, mvvplHotel2.url, mvvplHotel3.url],
     description: "A contemporary hospitality experience designed to balance comfort, elegance, and functionality. Every space is crafted to create a welcoming atmosphere while supporting modern guest expectations.",
   },
   {
@@ -1025,8 +1025,8 @@ export const projects: Project[] = [
     area: "",
     scope: "Architecture",
     category: "Architecture",
-    cover: linearEstate1.url,
-    gallery: [linearEstate3.url, linearEstate6.url, linearEstate1.url, linearEstate5.url, linearEstate4.url, linearEstate7.url, linearEstate8.url, linearEstate2.url],
+    cover: linearEstateContext.url,
+    gallery: [linearEstateContext.url, linearEstateAerialTop.url, linearEstateAerialElev.url, linearEstateEntry.url, linearEstate3.url, linearEstate6.url, linearEstate1.url, linearEstate5.url, linearEstate4.url, linearEstate7.url, linearEstate8.url, linearEstate2.url],
     description: "A residential masterplan composed of contemporary villas, landscaped streets, and community spaces. Defined by clean geometry and generous open areas, the development balances privacy, connectivity, and everyday living within a cohesive architectural language.",
   },
   {
