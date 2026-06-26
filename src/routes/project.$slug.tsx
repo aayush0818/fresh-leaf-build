@@ -133,8 +133,10 @@ function ProjectPage() {
               let i = 0;
               let key = 0;
               let useFull = true;
+              const fullBleedSet = new Set(project.fullBleed ?? []);
               while (i < gallery.length) {
-                if (useFull) {
+                const forceFull = fullBleedSet.has(gallery[i]);
+                if (useFull || forceFull) {
                   blocks.push(
                     <ClipReveal key={key++}>
                       <div className="idlx-mono-fig idlx-mono-fig--full">
@@ -143,7 +145,8 @@ function ProjectPage() {
                     </ClipReveal>
                   );
                   i += 1;
-                } else if (i + 1 < gallery.length) {
+                  if (!useFull) continue;
+                } else if (i + 1 < gallery.length && !fullBleedSet.has(gallery[i + 1])) {
                   blocks.push(
                     <div className="idlx-mono-pair" key={key++}>
                       <ClipReveal>
