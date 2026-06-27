@@ -225,8 +225,8 @@ function SmartGallery({ gallery, fullBleed, projectName }: { gallery: string[]; 
       continue;
     }
 
-    // Solo image: landscapes/squares go full bleed; portraits/unknown go inset to avoid huge crops.
-    if (o === "l" || o === "s") {
+    // Solo image: landscapes/squares/unknown go full bleed; only portraits go inset to avoid huge crops.
+    if (o !== "p") {
       blocks.push(
         <ClipReveal key={key++}>
           <div className="idlx-mono-fig idlx-mono-fig--full">
