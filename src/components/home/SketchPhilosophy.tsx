@@ -185,14 +185,6 @@ export function SketchPhilosophy() {
           (Our Philosophy)
         </div>
 
-        {/* Soft section intro - visible before the sketch begins drawing */}
-        <div className="sketch-intro" aria-hidden>
-          <span className="sketch-intro-eyebrow">A way of working</span>
-          <p className="sketch-intro-line">
-            Drawn line by line, the way every project begins.
-          </p>
-        </div>
-
         {/* Philosophy text overlay (upper-left) */}
         <div className="philosophy-overlay" ref={overlayRef}>
           <div className="philosophy-text">
