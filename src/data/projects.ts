@@ -581,7 +581,7 @@ import linearEstateHero from "@/assets/linear-estate-hero.png.asset.json";
 // Lantern Villa - Architecture · Residential
 import lanternVilla1 from "@/assets/lantern-villa-1.jpg.asset.json";
 import lanternVilla2 from "@/assets/lantern-villa-2.jpg.asset.json";
-import lanternVilla3 from "@/assets/lantern-villa-3.jpg.asset.json";
+
 import lanternVilla4 from "@/assets/lantern-villa-4.jpg.asset.json";
 import lanternVilla5 from "@/assets/lantern-villa-5.jpg.asset.json";
 import lanternVilla6 from "@/assets/lantern-villa-6.jpg.asset.json";
@@ -1111,7 +1111,7 @@ export const projects: Project[] = [
     category: "Architecture",
     cover: lanternVilla2.url,
     coverPosition: "50% 42%",
-    gallery: [lanternVilla1.url, lanternVilla9.url, lanternVilla14.url, lanternVilla24.url, lanternVilla6.url, lanternVilla22.url, lanternVilla13.url, lanternVilla3.url, lanternVilla5.url, lanternVilla10.url, lanternVilla11.url, lanternVilla16.url, lanternVilla8.url, lanternVilla18.url, lanternVilla20.url, lanternVilla21.url, lanternVilla15.url, lanternVilla23.url, lanternVilla2.url, lanternVilla4.url, lanternVilla19.url],
+    gallery: [lanternVilla1.url, lanternVilla9.url, lanternVilla14.url, lanternVilla24.url, lanternVilla6.url, lanternVilla22.url, lanternVilla13.url, lanternVilla5.url, lanternVilla10.url, lanternVilla11.url, lanternVilla16.url, lanternVilla8.url, lanternVilla18.url, lanternVilla20.url, lanternVilla21.url, lanternVilla15.url, lanternVilla23.url, lanternVilla2.url, lanternVilla4.url, lanternVilla19.url],
     description: "Defined by vertical timber elements and symmetrical massing, the residence combines warmth and precision. The interplay of light, materiality, and proportion creates a home that feels both contemporary and timeless.",
   },
   {
