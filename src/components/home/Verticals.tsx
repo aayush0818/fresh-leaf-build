@@ -6,7 +6,7 @@ import intResidential from "@/assets/verticals/int-residential.jpg";
 import intCommercial from "@/assets/verticals/int-commercial.jpg";
 import verticalResidentialAsset from "@/assets/uploads/vertical-residential-2026.png.asset.json";
 import verticalHospitalityAsset from "@/assets/uploads/vertical-hospitality-2026.png.asset.json";
-import verticalInstitutionalAsset from "@/assets/uploads/vertical-institutional-2026.png.asset.json";
+import verticalInstitutionalAsset from "@/assets/uploads/vertical-institutional-via-2026.webp.asset.json";
 
 const archResidential = verticalResidentialAsset.url;
 const hospitalityImg = verticalHospitalityAsset.url;
