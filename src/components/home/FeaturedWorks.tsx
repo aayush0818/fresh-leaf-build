@@ -5,7 +5,7 @@ const slugs = [
   "lantern-villa",
   "meril-park-1",
   "monster",
-  "mvvpl-hilltop-hotel",
+  "energize-resort-nashik",
   "panorama-house",
   "quest-ajay-seth",
   "house-of-layers",
