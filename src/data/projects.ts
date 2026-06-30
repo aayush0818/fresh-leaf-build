@@ -93,6 +93,7 @@ import mb56_2 from "@/assets/meril-bld-5-6-2.png.asset.json";
 // Meril Park 1 (Architecture · Industrial)
 import mp1_front from "@/assets/meril-park-1-main-building-front-view-new.jpg.asset.json";
 import merilPark1Cover2026 from "@/assets/uploads/meril-park-1-cover-2026.png.asset.json";
+import merilPark1New2026 from "@/assets/uploads/meril-park-1-2026.png.asset.json";
 
 import mp1_4 from "@/assets/meril-park-1-4.jpg.asset.json";
 import mp1_5 from "@/assets/meril-park-1-5.jpg.asset.json";
@@ -181,6 +182,7 @@ import er_n82 from "@/assets/energize-resort-nashik-extra-82.png.asset.json";
 import noirResidenceCoverUpload from "@/assets/noir-residence-cover-upload.png.asset.json";
 import goldCornetCoverUpload from "@/assets/gold-cornet-cover-upload.png.asset.json";
 import energizeResortCoverUpload from "@/assets/energize-resort-cover-upload.png.asset.json";
+import energizeResort2026 from "@/assets/uploads/energize-resort-2026.webp.asset.json";
 import skylineResidenceCoverUpload from "@/assets/skyline-residence-cover-upload.png.asset.json";
 
 // Aditya Birla Asthavinayak - Institutional Architecture
@@ -578,6 +580,7 @@ import linearNewMeditation from "@/assets/linear-new-meditation-post.jpg.asset.j
 import linearNewPlay from "@/assets/linear-new-childrensplayarea-post.jpg.asset.json";
 import linearEstateHero from "@/assets/linear-estate-hero.png.asset.json";
 import lanternVillaCover2026 from "@/assets/uploads/lantern-villa-cover-2026.png.asset.json";
+import lanternVilla2026 from "@/assets/uploads/lantern-villa-2026.webp.asset.json";
 
 // Lantern Villa - Architecture · Residential
 import lanternVilla1 from "@/assets/lantern-villa-1.jpg.asset.json";
@@ -825,7 +828,8 @@ export const projects: Project[] = [
     area: "",
     scope: "Architecture",
     category: "Architecture",
-    cover: energizeResortCoverUpload.url,
+    cover: energizeResort2026.url,
+    coverPosition: "50% 50%",
     gallery: energizeResortNashikGallery,
     description: "A hospitality destination designed around relaxation, recreation, and connection with nature. The project creates immersive experiences through thoughtful planning, landscape integration, and inviting communal spaces.",
   },
@@ -890,8 +894,8 @@ export const projects: Project[] = [
     area: "",
     scope: "Architecture",
     category: "Architecture",
-    cover: merilPark1Cover2026.url,
-    coverPosition: "58% 48%",
+    cover: merilPark1New2026.url,
+    coverPosition: "50% 50%",
     gallery: [mp1_front.url, mp1_5.url, mp1_6.url, mp1_reception.url],
     showcase: mp1_4.url,
     description: "Designed as a modern life sciences campus, the architecture combines monumentality with openness to create an environment of trust and progress.",
@@ -1108,8 +1112,8 @@ export const projects: Project[] = [
     area: "",
     scope: "Architecture",
     category: "Architecture",
-    cover: lanternVillaCover2026.url,
-    coverPosition: "50% 60%",
+    cover: lanternVilla2026.url,
+    coverPosition: "50% 50%",
     gallery: [lanternVilla1.url, lanternVilla9.url, lanternVilla14.url, lanternVilla24.url, lanternVilla6.url, lanternVilla22.url, lanternVilla13.url, lanternVilla5.url, lanternVilla10.url, lanternVilla11.url, lanternVilla16.url, lanternVilla8.url, lanternVilla18.url, lanternVilla20.url, lanternVilla21.url, lanternVilla15.url, lanternVilla23.url, lanternVilla2.url, lanternVilla4.url, lanternVilla19.url],
     description: "Defined by vertical timber elements and symmetrical massing, the residence combines warmth and precision. The interplay of light, materiality, and proportion creates a home that feels both contemporary and timeless.",
   },
