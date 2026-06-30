@@ -90,6 +90,9 @@ import apj9 from "@/assets/apj-auditorium-9.jpg.asset.json";
 import mb56_1 from "@/assets/meril-bld-5-6-1.png.asset.json";
 import mb56_2 from "@/assets/meril-bld-5-6-2.png.asset.json";
 
+// Meril Beat Office (Architecture · Commercial)
+import merilBeat1 from "@/assets/meril-beat-office-1.jpg.asset.json";
+
 // Meril Park 1 (Architecture · Industrial)
 import mp1_front from "@/assets/meril-park-1-main-building-front-view-new.jpg.asset.json";
 import merilPark1Cover2026 from "@/assets/uploads/meril-park-1-cover-2026.png.asset.json";
