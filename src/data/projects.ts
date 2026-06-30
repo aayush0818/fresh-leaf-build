@@ -303,6 +303,10 @@ import sf7 from "@/assets/saffron-47.jpeg.asset.json";
 import sf8 from "@/assets/saffron-39.jpeg.asset.json";
 import sf9 from "@/assets/saffron-76.jpeg.asset.json";
 import sf10 from "@/assets/saffron-77.jpeg.asset.json";
+import mlAdd1 from "@/assets/monochrome-luxe-add-1.jpeg.asset.json";
+import mlAdd2 from "@/assets/monochrome-luxe-add-2.jpeg.asset.json";
+import mlAdd3 from "@/assets/monochrome-luxe-add-3.jpeg.asset.json";
+import mlAdd4 from "@/assets/monochrome-luxe-add-4.jpeg.asset.json";
 
 // Onyx & Ivory - The walnut house (Residential Interior)
 import ox1 from "@/assets/onyx-008.jpeg.asset.json";
@@ -315,6 +319,10 @@ import ox7 from "@/assets/onyx-024.jpeg.asset.json";
 import ox8 from "@/assets/onyx-049.jpeg.asset.json";
 import ox9 from "@/assets/onyx-028.jpeg.asset.json";
 import ox10 from "@/assets/onyx-026.jpeg.asset.json";
+import whAdd1 from "@/assets/walnut-house-add-1.jpeg.asset.json";
+import whAdd2 from "@/assets/walnut-house-add-2.jpeg.asset.json";
+import whAdd3 from "@/assets/walnut-house-add-3.jpeg.asset.json";
+import whAdd4 from "@/assets/walnut-house-add-4.jpeg.asset.json";
 
 // Emerald Reverie - House of symmetry (Residential Interior)
 import er1 from "@/assets/emerald-024-2.jpeg.asset.json";
@@ -342,7 +350,9 @@ import hoa7 from "@/assets/house-of-arches-21.jpeg.asset.json";
 import hoa8 from "@/assets/house-of-arches-24.jpeg.asset.json";
 import hoa9 from "@/assets/house-of-arches-61.jpeg.asset.json";
 import hoa10 from "@/assets/house-of-arches-66.jpeg.asset.json";
-const houseOfArchesGallery = [hoa1.url, hoa3.url, hoa4.url, hoa2.url, hoa5.url, hoa6.url, hoa7.url, hoa8.url, hoa9.url, hoa10.url];
+import hoaAdd1 from "@/assets/house-of-arches-add-1.jpeg.asset.json";
+import hoaAdd2 from "@/assets/house-of-arches-add-2.jpeg.asset.json";
+const houseOfArchesGallery = [hoa1.url, hoa3.url, hoa4.url, hoa2.url, hoa5.url, hoa6.url, hoa7.url, hoa8.url, hoa9.url, hoa10.url, hoaAdd1.url, hoaAdd2.url];
 
 // The Layer Residence - Residential Interior
 import lr1 from "@/assets/layer-res-78.jpeg.asset.json";
@@ -565,8 +575,8 @@ const ratanshiKherajGallery = [rk1.url, rk2.url, rk3.url, rk4.url, rk5.url, rk6.
 const solitaaGallery = [sl1.url, sl2.url, sl3.url, sl4.url, sl5.url, sl6.url, sl7.url, sl8.url];
 const biguineGallery = [jcb1.url, jcb2.url, jcb3.url, jcb4.url, jcb5.url, jcb6.url, jcb7.url];
 const sereneHeightsGallery = [sh1.url, sh3.url, sh4.url, sh5.url, sh8.url, sh2.url, sh6.url, sh7.url];
-const saffronStoneGallery = [sf1.url, sf2.url, sf3.url, sf9.url, sf10.url, sf4.url, sf5.url, sf6.url, sf7.url, sf8.url];
-const onyxIvoryGallery = [ox1.url, ox7.url, ox3.url, ox8.url, ox2.url, ox10.url, ox4.url, ox5.url, ox6.url, ox9.url];
+const saffronStoneGallery = [sf1.url, sf2.url, sf3.url, sf9.url, sf10.url, sf4.url, sf5.url, sf6.url, sf7.url, sf8.url, mlAdd1.url, mlAdd2.url, mlAdd3.url, mlAdd4.url];
+const onyxIvoryGallery = [ox1.url, ox7.url, ox3.url, ox8.url, ox2.url, ox10.url, ox4.url, ox5.url, ox6.url, ox9.url, whAdd1.url, whAdd2.url, whAdd3.url, whAdd4.url];
 const emeraldReverieGallery = [er1.url, er2.url, er3.url, er9.url, er4.url, er5.url, er6.url, er7.url, er8.url, houseOfSymmetryAdd1.url, houseOfSymmetryAdd2.url, houseOfSymmetryAdd3.url];
 const blushBronzeResidenceGallery = [bb3.url, bb7.url, bb1.url, bb4.url, bb5.url, bb6.url, bb2.url, eastWingHouseAdd1.url, eastWingHouseAdd2.url, eastWingHouseAdd3.url, eastWingHouseAdd4.url];
 const sageWhisperResidenceGallery = [sw3.url, sw1.url, sw2.url, swe91.url, swe75.url, swe56.url, swe27.url, swe13.url, swe90.url, swe124.url, swe45.url, swe2.url, swe130.url, houseOfStoneAdd1.url, houseOfStoneAdd2.url];
