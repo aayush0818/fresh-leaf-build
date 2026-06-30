@@ -62,6 +62,12 @@ function ProjectPage() {
   const gallery = (() => {
     const seen = new Set<string>();
     const unique = rawGallery.filter((u) => (seen.has(u) ? false : (seen.add(u), true)));
+    if (project.keepHeroInGallery) {
+      // Append hero at the end if not already present so it appears exactly once,
+      // at the bottom of the gallery (as a deliberate repeat of the cover).
+      const withHero = unique.includes(heroUrl) ? unique : [...unique, heroUrl];
+      return withHero;
+    }
     const withoutHero = unique.filter((u) => u !== heroUrl);
     return withoutHero.length ? withoutHero : unique;
   })();
@@ -70,7 +76,7 @@ function ProjectPage() {
   return (
     <>
       <CustomCursor />
-      <Header />
+      <Header mode="immersive" />
       <article className={`idlx-page${project.imageFit === "contain" ? " idlx-fit-contain" : ""}`}>
         <CinematicHero
           image={project.cover}

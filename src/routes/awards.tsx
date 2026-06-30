@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Header } from "@/components/home/Header";
@@ -136,6 +136,15 @@ function AwardsPage() {
         ) : null}
       </AnimatePresence>
 
+      <section className="idlx-awards-cta">
+        <div className="idlx-awards-cta-inner">
+          <p className="idl-eyebrow"><span className="dot" />Explore Further</p>
+          <h2 className="idlx-awards-cta-title">See our work featured in the press</h2>
+          <Link to="/media-recognition" className="idl-btn idl-btn--dark" data-hover>
+            View Media Recognition →
+          </Link>
+        </div>
+      </section>
       <Footer />
     </>
   );
