@@ -696,6 +696,7 @@ export const projects: Project[] = [
     category: "Architecture",
     cover: ma1.url,
     gallery: merilAcademyGallery,
+    galleryPairs: [[ma14.url, maLobby.url]],
     description: "A contemporary learning environment shaped by fluid architecture, openness, and connection. Designed to inspire growth and collaboration, the academy creates spaces that nurture education beyond the classroom.",
   },
   {
