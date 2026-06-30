@@ -581,7 +581,7 @@ import linearEstateHero from "@/assets/linear-estate-hero.png.asset.json";
 // Lantern Villa - Architecture · Residential
 import lanternVilla1 from "@/assets/lantern-villa-1.jpg.asset.json";
 import lanternVilla2 from "@/assets/lantern-villa-2.jpg.asset.json";
-import lanternVilla3 from "@/assets/lantern-villa-3.jpg.asset.json";
+
 import lanternVilla4 from "@/assets/lantern-villa-4.jpg.asset.json";
 import lanternVilla5 from "@/assets/lantern-villa-5.jpg.asset.json";
 import lanternVilla6 from "@/assets/lantern-villa-6.jpg.asset.json";
