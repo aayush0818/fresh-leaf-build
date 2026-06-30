@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CinematicHero } from "@/components/motion/CinematicHero";
-import { MaskText } from "@/components/motion/MaskText";
 import { Reveal } from "@/components/motion/Reveal";
 import { Marquee } from "@/components/motion/Marquee";
 
@@ -14,7 +13,6 @@ import bottomSplitOne from "@/assets/idl/PAB9081-HDR.jpg.asset.json";
 import bottomSplitTwo from "@/assets/idl/PAB9186-HDR.jpg.asset.json";
 import boardroomImg from "@/assets/idl/about-split-1.png.asset.json";
 import manifestoImg from "@/assets/PAB9021-HDR_1.jpg.asset.json";
-import splitTwoImg from "@/assets/idl/about-split-2.png.asset.json";
 
 const studioHero = heroImg.url;
 
