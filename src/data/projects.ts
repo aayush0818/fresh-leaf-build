@@ -307,6 +307,16 @@ import mlAdd1 from "@/assets/monochrome-luxe-add-1.jpeg.asset.json";
 import mlAdd2 from "@/assets/monochrome-luxe-add-2.jpeg.asset.json";
 import mlAdd3 from "@/assets/monochrome-luxe-add-3.jpeg.asset.json";
 import mlAdd4 from "@/assets/monochrome-luxe-add-4.jpeg.asset.json";
+import mlAdd5 from "@/assets/monochrome-luxe-add-5.jpeg.asset.json";
+import mlAdd6 from "@/assets/monochrome-luxe-add-6.jpeg.asset.json";
+import mlAdd7 from "@/assets/monochrome-luxe-add-7.jpeg.asset.json";
+import mlAdd8 from "@/assets/monochrome-luxe-add-8.jpeg.asset.json";
+import craftedHomeAdd1 from "@/assets/crafted-home-add-1.jpg.asset.json";
+import craftedHomeAdd2 from "@/assets/crafted-home-add-2.jpg.asset.json";
+import lightwellAdd1 from "@/assets/lightwell-add-1.jpg.asset.json";
+import lightwellAdd2 from "@/assets/lightwell-add-2.jpg.asset.json";
+import lightwellAdd3 from "@/assets/lightwell-add-3.jpg.asset.json";
+import lightwellAdd4 from "@/assets/lightwell-add-4.jpg.asset.json";
 
 // Onyx & Ivory - The walnut house (Residential Interior)
 import ox1 from "@/assets/onyx-008.jpeg.asset.json";
